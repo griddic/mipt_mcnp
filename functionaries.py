@@ -7,14 +7,15 @@ from os.path import join as pjoin
 from matplotlib import pyplot as plt
 from matplotlib.mlab import griddata
 
-def construct_initial_spectrum_tally(file_):
+def construct_initial_spectrum_tally(file_, x, y, z):
     tallies = obr.construct_tallies(file_)
+    INITIAL_SPECTRUM_TALLY = None
     for tally in tallies:
-        if tally.x == 0 and tally.y == 0:
+        if tally.x == x and tally.y == y and tally.z == z:
             INITIAL_SPECTRUM_TALLY = tally
             break
+    assert INITIAL_SPECTRUM_TALLY is not None, "No tally with such coordinates."
     return INITIAL_SPECTRUM_TALLY
-
 
 def sample_length_and_mode_by_file_name(file_name):
     name = os.path.split(file_name)[1]
@@ -66,6 +67,7 @@ def plot_en_spectrums_in_back_going_flow(file_name, tally_distances, colors, fil
     title = 'back flow.spectrum.sample len = ' + str(sample_length) + 'cm. mode = ' + mode
     outt = open(pjoin(folder_to_place_images,title + ".csv"), 'w')
     outt.write("distance_to_the_tally,E_min,E_max,value,dispersion\n")
+    #ax = plt.figure()
     for ind in range(len(tally_distances)):
         tally_distance = tally_distances[ind]
         col = colors[ind]
@@ -75,11 +77,15 @@ def plot_en_spectrums_in_back_going_flow(file_name, tally_distances, colors, fil
         values = []
         dy = []
         mid = []
+        x = 0
+        y = 0
+        z = 100 - tally_distance - 1.5
         if mode == 'PP':
-            etalon = construct_initial_spectrum_tally(file_without_sample)
-
+            etalon = construct_initial_spectrum_tally(file_without_sample, x, y, z)
+        count_tallies = 0
         for tally in tallies:
-            if tally.x == 0 and tally.y == 0 and tally.z == 100 - sample_length - tally_distance - 1.5:
+            if tally.x == x and tally.y == y and tally.z == z:
+                count_tallies += 1
                 kk = tally.values.keys()
                 kk.sort()
                 for en_diap in kk:
@@ -97,7 +103,12 @@ def plot_en_spectrums_in_back_going_flow(file_name, tally_distances, colors, fil
                         values.append(tally.values[en_diap] * (en_diap[1] - en_diap[0]))
                     dy.append(tally.dispersion[en_diap]*values[-1]  * (en_diap[1] - en_diap[0]))
                     mid.append((en_diap[1] + en_diap[0])/2)
+        if count_tallies == 0:
+            print "Warning! No tallies for distance {len} found".format(len=tally_distance)
         plt.bar(left, values,width, color=col, yerr=dy, log=True, bottom=0.000000001, label=('distance to detector = ' + str(tally_distance) + 'cm.'))
+        #plt.errorbar(left, values, color=col, yerr=dy, label=('distance to detector = ' + str(tally_distance) + 'cm.'))
+        #plt.yscale('log')
+        #plt.ylim([10**(-11),10**(-6)])
         plt.title(r'back flow.spectrum.\\sample len = ' + str(sample_length) + r'cm. mode = ' + mode)
         plt.xlabel(r'Energy, MEV')
         plt.ylabel(r'particles, $\frac{F}{cm^2 sec MEV}$')
@@ -112,7 +123,6 @@ def plot_en_spectrums_in_back_going_flow(file_name, tally_distances, colors, fil
 
 def plot_sum_en_spectrum_in_back_going_flow(file_names, tally_distances, colors, PP_file_without_sample, folder_to_place_images):
     neutron_file, photon_file = file_names
-    etalon = construct_initial_spectrum_tally(PP_file_without_sample)
     if os.path.split(neutron_file)[1][1:] != os.path.split(photon_file)[1][1:]:
         print "files_not_correspond_to_each_other"
         return
@@ -130,10 +140,13 @@ def plot_sum_en_spectrum_in_back_going_flow(file_names, tally_distances, colors,
         values = []
         dy = []
         mid = []
-
+        x = 0
+        y = 0
+        z = 100 - tally_distance - 1.5
+        etalon = construct_initial_spectrum_tally(PP_file_without_sample,x,y,z)
         for tally_ind, tally in enumerate(tallies_n):
-            if tallies_n[tally_ind].x == 0 and tallies_n[tally_ind].y == 0 and tallies_n[tally_ind].z == 100 - sample_length - tally_distance - 1.5:
-                if tallies_p[tally_ind].x != 0 or tallies_p[tally_ind].y != 0 or tallies_p[tally_ind].z != 100 - sample_length - tally_distance - 1.5:
+            if tallies_n[tally_ind].x == x and tallies_n[tally_ind].y == y and tallies_n[tally_ind].z == z:
+                if tallies_p[tally_ind].x != x or tallies_p[tally_ind].y != y or tallies_p[tally_ind].z != z:
                     print "wrong tallies order"
                     return
                 kk = tallies_n[tally_ind].values.keys()
@@ -152,6 +165,9 @@ def plot_sum_en_spectrum_in_back_going_flow(file_names, tally_distances, colors,
                     dy.append(min(temp, values[-1]))
                     mid.append((en_diap[1] + en_diap[0])/2)
         plt.bar(left, values,width, color=col, yerr=dy, log=True, bottom=0.000000001, label=('distance to detector = ' + str(tally_distance) + 'cm.'))
+        #plt.errorbar(left, values, color=col, yerr=dy, label=('distance to detector = ' + str(tally_distance) + 'cm.'))
+        #plt.yscale('log')
+        #plt.ylim([10**(-11),10**(-6)])
         plt.title(r'back flow.spectrum.\\sample len = ' + str(sample_length) + r'cm. mode = full')
         plt.xlabel(r'Energy, MEV')
         plt.ylabel(r'particles, $\frac{F}{cm^2 sec MEV}$')
@@ -168,19 +184,22 @@ def plot_sum_en_spectrum_in_back_going_flow(file_names, tally_distances, colors,
     plt.close()
 
 def plot_dose_in_back_going_flow_for_each_file(names, tally_distanses, PP_file_without_sample, folder_to_place_images):
-    etalon = construct_initial_spectrum_tally(PP_file_without_sample)
     legend = []
     for file_name in names:
         sample_length, mode = sample_length_and_mode_by_file_name(file_name)
         tallies = obr.construct_tallies(file_name)
         dosa_at_length = {}
         for tally_ind, tally in enumerate(tallies):
-            if tally.x == 0 and tally.y == 0 and (100 - sample_length - tally.z - 1.5 in tally_distanses):
+            if tally.x == 0 and tally.y == 0 and (100 - tally.z - 1.5 in tally_distanses):
                 if mode == 'PP':
+                    etalon = construct_initial_spectrum_tally(PP_file_without_sample,
+                                                              tally.x,
+                                                              tally.y,
+                                                              tally.z)
                     dosa, dispersion = (tally.dose() - etalon.dose())/4.
                 else:
                     dosa, dispersion = tally.dose()
-                dosa_at_length[100 - sample_length - tally.z - 1.5] = (dosa, dispersion)
+                dosa_at_length[100 - tally.z - 1.5] = (dosa, dispersion)
         x = sorted(dosa_at_length.keys())
         y = [dosa_at_length[k][0] for k in x]
         dy = [dosa_at_length[k][0]*dosa_at_length[k][1] for k in x]
@@ -197,16 +216,19 @@ def plot_dose_in_back_going_flow_for_each_file(names, tally_distanses, PP_file_w
     plt.show()
 
 def plot_full_dose_in_back_going_flow_for_each_file(names, tally_distanses, PP_file_without_sample, folder_to_place_images):
-    etalon = construct_initial_spectrum_tally(PP_file_without_sample)
     legend = []
     for neutron_file, photon_file in names:
         sample_length, garbage = sample_length_and_mode_by_file_name(neutron_file)
         tallies_n, tallies_p = obr.construct_tallies(neutron_file), obr.construct_tallies(photon_file)
         dosa_at_length = {}
         for tally_ind, (tally_n, tally_p) in enumerate(zip(tallies_n, tallies_p)):
-            if tally_n.x == 0 and tally_n.y == 0 and (100 - sample_length - tally_n.z - 1.5 in tally_distanses):
+            if tally_n.x == 0 and tally_n.y == 0 and (100 - tally_n.z - 1.5 in tally_distanses):
+                etalon = construct_initial_spectrum_tally(PP_file_without_sample,
+                                                              tally_p.x,
+                                                              tally_p.y,
+                                                              tally_p.z)
                 dosa, dispersion = tally_n.dose() + (tally_p.dose() - etalon.dose())/4.
-                dosa_at_length[100 - sample_length - tally_n.z - 1.5] = (dosa, dispersion)
+                dosa_at_length[100 - tally_n.z - 1.5] = (dosa, dispersion)
         x = sorted(dosa_at_length.keys())
         y = [dosa_at_length[k][0] for k in x]
         dy = [dosa_at_length[k][0]*dosa_at_length[k][1] for k in x]
@@ -221,6 +243,7 @@ def plot_full_dose_in_back_going_flow_for_each_file(names, tally_distanses, PP_f
     plt.legend(legend, loc='best')
     plt.savefig(pjoin(folder_to_place_images,title + ".png"), dpi = 300)
     plt.show()
+
 
 def extend_x_y(x,y):
     if x == 0 and y == 0:
