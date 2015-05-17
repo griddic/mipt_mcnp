@@ -46,5 +46,4 @@ for nd in divisors(N):
             print nd, md
             counter += 1
 print counter
-print len(divisors(M))
 
