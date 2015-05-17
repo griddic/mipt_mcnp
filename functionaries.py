@@ -7,6 +7,26 @@ from os.path import join as pjoin
 from matplotlib import pyplot as plt
 from matplotlib.mlab import griddata
 
+
+def __parse_name(file_name):
+    ans = {}
+    name = os.path.split(file_name)[1]
+    ans['mode'] = name[:2]
+    ans['is_carbon'] = name.find('C') != -1
+    if ans['is_carbon']:
+        ans['length'] = int(name[3:-1])
+    else:
+        ans['length'] = int(name[2:-1])
+    return ans
+
+def parse_file_name(file_name, what_to_return):
+    ans = []
+    p = __parse_name(file_name)
+    for ret in what_to_return:
+        ans.append(p[ret])
+    return ans
+
+
 def construct_initial_spectrum_tally(file_, x, y, z):
     tallies = obr.construct_tallies(file_)
     INITIAL_SPECTRUM_TALLY = None
@@ -196,9 +216,9 @@ def plot_dose_in_back_going_flow_for_each_file(names, tally_distanses, PP_file_w
                                                               tally.x,
                                                               tally.y,
                                                               tally.z)
-                    dosa, dispersion = (tally.dose() - etalon.dose())/4.
+                    dosa, dispersion = (tally.get_dose() - etalon.get_dose())/4.
                 else:
-                    dosa, dispersion = tally.dose()
+                    dosa, dispersion = tally.get_dose()
                 dosa_at_length[100 - tally.z - 1.5] = (dosa, dispersion)
         x = sorted(dosa_at_length.keys())
         y = [dosa_at_length[k][0] for k in x]
@@ -227,7 +247,7 @@ def plot_full_dose_in_back_going_flow_for_each_file(names, tally_distanses, PP_f
                                                               tally_p.x,
                                                               tally_p.y,
                                                               tally_p.z)
-                dosa, dispersion = tally_n.dose() + (tally_p.dose() - etalon.dose())/4.
+                dosa, dispersion = tally_n.get_dose() + (tally_p.get_dose() - etalon.get_dose())/4.
                 dosa_at_length[100 - tally_n.z - 1.5] = (dosa, dispersion)
         x = sorted(dosa_at_length.keys())
         y = [dosa_at_length[k][0] for k in x]
@@ -288,7 +308,7 @@ def plot_dose_after_the_sample(names, FOLDER_TO_SAVE_IMAGES):
             assert tally_n.is_the_same(tally_p), "Tallies are not correspond to each other."
             if abs(tally_n.x) > 20 or abs(tally_n.y) > 20:
                 continue
-            dose = tally_n.dose()[0] + tally_p.dose()[0]/4.
+            dose = tally_n.get_dose()[0] + tally_p.get_dose()[0]/4.
             for x,y in extend_x_y(tally_n.x,tally_n.y):
                 xs.append(x)
                 ys.append(y)

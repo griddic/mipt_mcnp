@@ -87,7 +87,7 @@ class Tally:
                     disp = (self.values[key]*self.dispersion[key] + answer*disp)/(self.values[key] + answer)
         return answer, disp
 
-    def dose(self):
+    def get_dose(self):
         u"""  Возвращает дозу в мкр/сек.
         """
         keys_ = sorted(self.values.keys())

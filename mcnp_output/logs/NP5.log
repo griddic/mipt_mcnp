@@ -1,0 +1,193 @@
+ mcnpx    ver=2.5e  ld=Mon Feb 23 08:00:00 MST 2004   05/01/15 12:42:00
+
+ *****************************************************
+ *                                                   *
+ *            Copyright Notice for MCNPX             *
+ *                                                   *
+ * This program was prepared by the Regents of the   *
+ * University of California at Los Alamos National   *
+ * Laboratory (the University) under contract number *
+ * W-7405-ENG-36 with the U.S. Department of Energy  *
+ * (DOE).  The University has certain rights in the  *
+ * program pursuant to the contract and the program  *
+ * should not be copied or distributed outside your  *
+ * organization.   All rights in the program are     *
+ * reserved by the DOE and the University.  Neither  *
+ * the U.S. Government nor the University makes any  *
+ * warranty, express or implied, or assumes any      *
+ * liability or responsibility for the use of this   *
+ * software.                                         *
+ *                                                   *
+ *****************************************************
+ mode: n P                                                            
+ warning.  photonuclear physics may be needed (phys:p).
+ 
+ warning.   322 surfaces were deleted for being the same as others.
+ warning.    19 energy bins of tally  14 are below energy cutoff.
+ imcn   is done
+ runtpe already exists.  runtpf is created instead.
+ runtpf already exists.  runtpg is created instead.
+ runtpg already exists.  runtph is created instead.
+ runtph already exists.  runtpi is created instead.
+ runtpi already exists.  runtpj is created instead.
+ runtpj already exists.  runtpk is created instead.
+ runtpk already exists.  runtpl is created instead.
+ runtpl already exists.  runtpm is created instead.
+ runtpm already exists.  runtpn is created instead.
+ runtpn already exists.  runtpo is created instead.
+ runtpo already exists.  runtpp is created instead.
+ runtpp already exists.  runtpq is created instead.
+ runtpq already exists.  runtpr is created instead.
+ runtpr already exists.  runtps is created instead.
+ runtps already exists.  runtpt is created instead.
+ runtpt already exists.  runtpu is created instead.
+ runtpu already exists.  runtpv is created instead.
+ runtpv already exists.  runtpw is created instead.
+ runtpw already exists.  runtpx is created instead.
+ runtpx already exists.  runtpy is created instead.
+ warning.  material    7 has been set to a conductor.
+ dump    1 on file runtpy     nps =           0  coll =              0
+                              ctm =      0.00     nrn =              0
+ xact   is done
+ dynamic storage =         0 words,          0 bytes.      cp0 =  0.02
+ dump    2 on file runtpy     nps =     1451497  coll =       73513854
+                              ctm =     15.01     nrn =     1169327069
+ dump    3 on file runtpy     nps =     2901383  coll =      146911975
+                              ctm =     30.02     nrn =     2336681345
+ dump    4 on file runtpy     nps =     4352000  coll =      220294502
+                              ctm =     45.02     nrn =     3503837349
+ dump    5 on file runtpy     nps =     5804377  coll =      293797279
+                              ctm =     60.04     nrn =     4672640549
+ dump    6 on file runtpy     nps =     7254994  coll =      367248654
+                              ctm =     75.04     nrn =     5841053811
+ dump    7 on file runtpy     nps =     8644517  coll =      437615912
+                              ctm =     90.05     nrn =     6960210053
+ dump    8 on file runtpy     nps =    10094629  coll =      511061139
+                              ctm =    105.06     nrn =     8128438101
+ dump    9 on file runtpy     nps =    11544350  coll =      584523199
+                              ctm =    120.06     nrn =     9296926756
+ dump   10 on file runtpy     nps =    12994923  coll =      658006964
+                              ctm =    135.06     nrn =    10465517694
+ dump   11 on file runtpy     nps =    14424055  coll =      730358492
+                              ctm =    150.07     nrn =    11616008819
+ dump   12 on file runtpy     nps =    15874242  coll =      803768229
+                              ctm =    165.08     nrn =    12783592920
+ dump   13 on file runtpy     nps =    17326520  coll =      877300384
+                              ctm =    180.09     nrn =    13952965127
+ dump   14 on file runtpy     nps =    18778464  coll =      950796858
+                              ctm =    195.09     nrn =    15121955858
+ dump   15 on file runtpy     nps =    20229128  coll =     1024336152
+                              ctm =    210.10     nrn =    16291841401
+ dump   16 on file runtpy     nps =    21680176  coll =     1097782557
+                              ctm =    225.10     nrn =    17459933476
+ dump   17 on file runtpy     nps =    23133085  coll =     1171438146
+                              ctm =    240.12     nrn =    18631272624
+ dump   18 on file runtpy     nps =    24585636  coll =     1244998003
+                              ctm =    255.12     nrn =    19801121763
+ dump   19 on file runtpy     nps =    26037460  coll =     1318439400
+                              ctm =    270.12     nrn =    20969280549
+ dump   20 on file runtpy     nps =    27489634  coll =     1391824375
+                              ctm =    285.12     nrn =    22136291872
+ dump   21 on file runtpy     nps =    28941976  coll =     1465413054
+                              ctm =    300.14     nrn =    23306804390
+ dump   22 on file runtpy     nps =    30393097  coll =     1538850428
+                              ctm =    315.14     nrn =    24474862885
+ dump   23 on file runtpy     nps =    31846507  coll =     1612483119
+                              ctm =    330.14     nrn =    25646157077
+ dump   24 on file runtpy     nps =    33299943  coll =     1685967283
+                              ctm =    345.15     nrn =    26814876993
+ dump   25 on file runtpy     nps =    34750359  coll =     1759383413
+                              ctm =    360.15     nrn =    27982557054
+ dump   26 on file runtpy     nps =    36202096  coll =     1832860775
+                              ctm =    375.17     nrn =    29151135309
+ dump   27 on file runtpy     nps =    37651920  coll =     1906206718
+                              ctm =    390.17     nrn =    30317597695
+ dump   28 on file runtpy     nps =    39101744  coll =     1979486405
+                              ctm =    405.17     nrn =    31482996318
+ dump   29 on file runtpy     nps =    40552160  coll =     2052996400
+                              ctm =    420.17     nrn =    32652341223
+ dump   30 on file runtpy     nps =    42005200  coll =     2126469319
+                              ctm =    435.18     nrn =    33820986773
+ dump   31 on file runtpy     nps =    43455616  coll =     2199923115
+                              ctm =    450.18     nrn =    34989263333
+ dump   32 on file runtpy     nps =    44897992  coll =     2272993188
+                              ctm =    465.20     nrn =    36151338545
+ dump   33 on file runtpy     nps =    46345616  coll =     2346183756
+                              ctm =    480.20     nrn =    37315310496
+ dump   34 on file runtpy     nps =    47796032  coll =     2419675998
+                              ctm =    495.22     nrn =    38484286986
+ dump   35 on file runtpy     nps =    49246872  coll =     2493044096
+                              ctm =    510.22     nrn =    39651241000
+ dump   36 on file runtpy     nps =    50697288  coll =     2566544408
+                              ctm =    525.23     nrn =    40820354346
+ dump   37 on file runtpy     nps =    52147704  coll =     2640000309
+                              ctm =    540.24     nrn =    41988734770
+ dump   38 on file runtpy     nps =    53600152  coll =     2713570078
+                              ctm =    555.25     nrn =    43158999933
+ dump   39 on file runtpy     nps =    55050568  coll =     2786933242
+                              ctm =    570.26     nrn =    44325780544
+ dump   40 on file runtpy     nps =    56502827  coll =     2860414271
+                              ctm =    585.27     nrn =    45494284500
+ dump   41 on file runtpy     nps =    57953811  coll =     2933927524
+                              ctm =    600.29     nrn =    46663611577
+ dump   42 on file runtpy     nps =    59403520  coll =     3007282854
+                              ctm =    615.30     nrn =    47830305826
+ dump   43 on file runtpy     nps =    60853229  coll =     3080716964
+                              ctm =    630.31     nrn =    48998216068
+ dump   44 on file runtpy     nps =    62302424  coll =     3154110805
+                              ctm =    645.32     nrn =    50165370103
+ dump   45 on file runtpy     nps =    63755351  coll =     3227616503
+                              ctm =    660.33     nrn =    51334446053
+ dump   46 on file runtpy     nps =    65205060  coll =     3301048979
+                              ctm =    675.35     nrn =    52502448723
+ dump   47 on file runtpy     nps =    66655864  coll =     3374539838
+                              ctm =    690.36     nrn =    53671244008
+ dump   48 on file runtpy     nps =    68107182  coll =     3448077907
+                              ctm =    705.36     nrn =    54840848891
+ dump   49 on file runtpy     nps =    69560109  coll =     3521688629
+                              ctm =    720.37     nrn =    56011841936
+ dump   50 on file runtpy     nps =    71009304  coll =     3595107798
+                              ctm =    735.37     nrn =    57179667751
+ dump   51 on file runtpy     nps =    72460622  coll =     3668637021
+                              ctm =    750.39     nrn =    58349089709
+ dump   52 on file runtpy     nps =    73914644  coll =     3742205763
+                              ctm =    765.40     nrn =    59519108029
+ dump   53 on file runtpy     nps =    75367571  coll =     3815790926
+                              ctm =    780.40     nrn =    60689374583
+ dump   54 on file runtpy     nps =    76818889  coll =     3889179825
+                              ctm =    795.40     nrn =    61856496358
+ dump   55 on file runtpy     nps =    78271302  coll =     3962588308
+                              ctm =    810.41     nrn =    63023988289
+ dump   56 on file runtpy     nps =    79722620  coll =     4036100837
+                              ctm =    825.42     nrn =    64193159074
+ dump   57 on file runtpy     nps =    81175547  coll =     4109558793
+                              ctm =    840.42     nrn =    65361306508
+ dump   58 on file runtpy     nps =    82627960  coll =     4183128696
+                              ctm =    855.42     nrn =    66531377165
+ dump   59 on file runtpy     nps =    84080887  coll =     4256702973
+                              ctm =    870.43     nrn =    67701595167
+ dump   60 on file runtpy     nps =    85534156  coll =     4330231976
+                              ctm =    885.44     nrn =    68871257463
+ dump   61 on file runtpy     nps =    86986376  coll =     4403626502
+                              ctm =    900.46     nrn =    70038350357
+ dump   62 on file runtpy     nps =    88435376  coll =     4477005804
+                              ctm =    915.46     nrn =    71205345907
+ dump   63 on file runtpy     nps =    89885986  coll =     4550483847
+                              ctm =    930.47     nrn =    72374005478
+ dump   64 on file runtpy     nps =    91337210  coll =     4623927452
+                              ctm =    945.47     nrn =    73541936900
+ dump   65 on file runtpy     nps =    92787820  coll =     4697437894
+                              ctm =    960.48     nrn =    74711141322
+ dump   66 on file runtpy     nps =    94240040  coll =     4770985413
+                              ctm =    975.48     nrn =    75880977228
+ dump   67 on file runtpy     nps =    95692260  coll =     4844628525
+                              ctm =    990.49     nrn =    77052292356
+ dump   68 on file runtpy     nps =    97144480  coll =     4918150080
+                              ctm =   1005.49     nrn =    78221481000
+ dump   69 on file runtpy     nps =    98598630  coll =     4991788425
+                              ctm =   1020.50     nrn =    79392576353
+ run terminated when 100000000 particle histories were done.
+ warning.     1 of   1 tallies had bins with large relative errors.
+ dump   70 on file runtpy     nps =   100000000  coll =     5062733911
+                              ctm =   1034.99     nrn =    80520880546
+ mcrun  is done

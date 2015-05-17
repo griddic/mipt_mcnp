@@ -1,0 +1,148 @@
+ mcnpx    ver=2.5e  ld=Mon Feb 23 08:00:00 MST 2004   04/29/15 15:42:18
+
+ *****************************************************
+ *                                                   *
+ *            Copyright Notice for MCNPX             *
+ *                                                   *
+ * This program was prepared by the Regents of the   *
+ * University of California at Los Alamos National   *
+ * Laboratory (the University) under contract number *
+ * W-7405-ENG-36 with the U.S. Department of Energy  *
+ * (DOE).  The University has certain rights in the  *
+ * program pursuant to the contract and the program  *
+ * should not be copied or distributed outside your  *
+ * organization.   All rights in the program are     *
+ * reserved by the DOE and the University.  Neither  *
+ * the U.S. Government nor the University makes any  *
+ * warranty, express or implied, or assumes any      *
+ * liability or responsibility for the use of this   *
+ * software.                                         *
+ *                                                   *
+ *****************************************************
+ mode: n P                                                            
+ warning.  photonuclear physics may be needed (phys:p).
+ m5: 1001.50c 0.433013139 8016.24c 0.254732249 6000 0.007709002       
+ warning.  material   5 is not used in the problem.
+ 
+ warning.   318 surfaces were deleted for being the same as others.
+ warning.    19 energy bins of tally  14 are below energy cutoff.
+ imcn   is done
+ runtpe already exists.  runtpf is created instead.
+ runtpf already exists.  runtpg is created instead.
+ runtpg already exists.  runtph is created instead.
+ runtph already exists.  runtpi is created instead.
+ runtpi already exists.  runtpj is created instead.
+ runtpj already exists.  runtpk is created instead.
+ runtpk already exists.  runtpl is created instead.
+ runtpl already exists.  runtpm is created instead.
+ runtpm already exists.  runtpn is created instead.
+ runtpn already exists.  runtpo is created instead.
+ runtpo already exists.  runtpp is created instead.
+ warning.  material    7 has been set to a conductor.
+ dump    1 on file runtpp     nps =           0  coll =              0
+                              ctm =      0.00     nrn =              0
+ xact   is done
+ dynamic storage =         0 words,          0 bytes.      cp0 =  0.02
+ dump    2 on file runtpp     nps =     2021010  coll =       59009346
+                              ctm =     15.00     nrn =      946502553
+ dump    3 on file runtpp     nps =     4041960  coll =      117878443
+                              ctm =     30.01     nrn =     1890764233
+ dump    4 on file runtpp     nps =     6062848  coll =      176915194
+                              ctm =     45.01     nrn =     2837695952
+ dump    5 on file runtpp     nps =     8083920  coll =      235890749
+                              ctm =     60.03     nrn =     3783746347
+ dump    6 on file runtpp     nps =    10104992  coll =      294880366
+                              ctm =     75.03     nrn =     4729827372
+ dump    7 on file runtpp     nps =    12125696  coll =      353999870
+                              ctm =     90.04     nrn =     5678060615
+ dump    8 on file runtpp     nps =    14144524  coll =      412961641
+                              ctm =    105.04     nrn =     6623583458
+ dump    9 on file runtpp     nps =    16165596  coll =      471992066
+                              ctm =    120.06     nrn =     7570391469
+ dump   10 on file runtpp     nps =    18186668  coll =      530989531
+                              ctm =    135.06     nrn =     8516666668
+ dump   11 on file runtpp     nps =    20207740  coll =      589935930
+                              ctm =    150.07     nrn =     9462383942
+ dump   12 on file runtpp     nps =    22230320  coll =      649003877
+                              ctm =    165.08     nrn =    10409695636
+ dump   13 on file runtpp     nps =    24251392  coll =      708092265
+                              ctm =    180.09     nrn =    11357559787
+ dump   14 on file runtpp     nps =    26272464  coll =      767050035
+                              ctm =    195.10     nrn =    12303215614
+ dump   15 on file runtpp     nps =    28293536  coll =      825996567
+                              ctm =    210.10     nrn =    13248766078
+ dump   16 on file runtpp     nps =    30314608  coll =      884975457
+                              ctm =    225.10     nrn =    14194785461
+ dump   17 on file runtpp     nps =    32335680  coll =      944094102
+                              ctm =    240.11     nrn =    15143044126
+ dump   18 on file runtpp     nps =    34352264  coll =     1002838360
+                              ctm =    255.13     nrn =    16085389634
+ dump   19 on file runtpp     nps =    36373336  coll =     1061669526
+                              ctm =    270.14     nrn =    17029068657
+ dump   20 on file runtpp     nps =    38394408  coll =     1120561539
+                              ctm =    285.14     nrn =    17973652434
+ dump   21 on file runtpp     nps =    40415480  coll =     1179631369
+                              ctm =    300.15     nrn =    18921248425
+ dump   22 on file runtpp     nps =    42436552  coll =     1238504550
+                              ctm =    315.16     nrn =    19865660053
+ dump   23 on file runtpp     nps =    44456152  coll =     1297545440
+                              ctm =    330.17     nrn =    20812536993
+ dump   24 on file runtpp     nps =    46476452  coll =     1356351663
+                              ctm =    345.17     nrn =    21755713407
+ dump   25 on file runtpp     nps =    48496052  coll =     1415358747
+                              ctm =    360.18     nrn =    22702217804
+ dump   26 on file runtpp     nps =    50516352  coll =     1474348351
+                              ctm =    375.19     nrn =    23648555827
+ dump   27 on file runtpp     nps =    52538196  coll =     1533316167
+                              ctm =    390.20     nrn =    24594482024
+ dump   28 on file runtpp     nps =    54558496  coll =     1592361686
+                              ctm =    405.21     nrn =    25541500968
+ dump   29 on file runtpp     nps =    56580340  coll =     1651410249
+                              ctm =    420.22     nrn =    26488562450
+ dump   30 on file runtpp     nps =    58602884  coll =     1710509375
+                              ctm =    435.23     nrn =    27436653271
+ dump   31 on file runtpp     nps =    60622484  coll =     1769458332
+                              ctm =    450.24     nrn =    28382207525
+ dump   32 on file runtpp     nps =    62640540  coll =     1828401297
+                              ctm =    465.24     nrn =    29327607171
+ dump   33 on file runtpp     nps =    64662384  coll =     1887422627
+                              ctm =    480.25     nrn =    30274224734
+ dump   34 on file runtpp     nps =    66682684  coll =     1946363878
+                              ctm =    495.25     nrn =    31219596167
+ dump   35 on file runtpp     nps =    68704528  coll =     2005388619
+                              ctm =    510.26     nrn =    32166332923
+ dump   36 on file runtpp     nps =    70724828  coll =     2064365329
+                              ctm =    525.27     nrn =    33112338708
+ dump   37 on file runtpp     nps =    72744428  coll =     2123358642
+                              ctm =    540.27     nrn =    34058504749
+ dump   38 on file runtpp     nps =    74764728  coll =     2182341837
+                              ctm =    555.28     nrn =    35004554687
+ dump   39 on file runtpp     nps =    76786572  coll =     2241215572
+                              ctm =    570.29     nrn =    35948756520
+ dump   40 on file runtpp     nps =    78806872  coll =     2300006263
+                              ctm =    585.29     nrn =    36891702710
+ dump   41 on file runtpp     nps =    80826472  coll =     2358918702
+                              ctm =    600.30     nrn =    37836413169
+ dump   42 on file runtpp     nps =    82849016  coll =     2417954588
+                              ctm =    615.31     nrn =    38783264667
+ dump   43 on file runtpp     nps =    84826930  coll =     2475679142
+                              ctm =    630.32     nrn =    39709343412
+ dump   44 on file runtpp     nps =    86846972  coll =     2534546968
+                              ctm =    645.32     nrn =    40653548104
+ dump   45 on file runtpp     nps =    88867318  coll =     2593481648
+                              ctm =    660.33     nrn =    41598884932
+ dump   46 on file runtpp     nps =    90888078  coll =     2652434829
+                              ctm =    675.34     nrn =    42544377254
+ dump   47 on file runtpp     nps =    92909021  coll =     2711488530
+                              ctm =    690.35     nrn =    43491414454
+ dump   48 on file runtpp     nps =    94929964  coll =     2770433174
+                              ctm =    705.35     nrn =    44436869929
+ dump   49 on file runtpp     nps =    96950907  coll =     2829547289
+                              ctm =    720.37     nrn =    45384945771
+ dump   50 on file runtpp     nps =    98958664  coll =     2888232372
+                              ctm =    735.39     nrn =    46326276391
+ run terminated when 100000000 particle histories were done.
+ warning.     1 of   1 tallies had bins with large relative errors.
+ dump   51 on file runtpp     nps =   100000000  coll =     2918640820
+                              ctm =    743.12     nrn =    46813970357
+ mcrun  is done

@@ -1,0 +1,119 @@
+ mcnpx    ver=2.5e  ld=Mon Feb 23 08:00:00 MST 2004   05/02/15 07:35:09
+
+ *****************************************************
+ *                                                   *
+ *            Copyright Notice for MCNPX             *
+ *                                                   *
+ * This program was prepared by the Regents of the   *
+ * University of California at Los Alamos National   *
+ * Laboratory (the University) under contract number *
+ * W-7405-ENG-36 with the U.S. Department of Energy  *
+ * (DOE).  The University has certain rights in the  *
+ * program pursuant to the contract and the program  *
+ * should not be copied or distributed outside your  *
+ * organization.   All rights in the program are     *
+ * reserved by the DOE and the University.  Neither  *
+ * the U.S. Government nor the University makes any  *
+ * warranty, express or implied, or assumes any      *
+ * liability or responsibility for the use of this   *
+ * software.                                         *
+ *                                                   *
+ *****************************************************
+ m5: 1001.50c 0.433013139 8016.24c 0.254732249 6000 0.007709002       
+ warning.  neutron table inconsistent with mode will be ignored.
+ warning.  neutron table inconsistent with mode will be ignored.
+          12000 0.002737254 13027.60c 0.009664184 14000 0.086027996   
+ warning.  neutron table inconsistent with mode will be ignored.
+          16000 0.001452421 20000.60c 0.015641454 26000 0.00525106    
+ warning.  neutron table inconsistent with mode will be ignored.
+          5010.60c 0.00420085 5011.60c 0.00105021 22000 0.178520181   
+ warning.  neutron table inconsistent with mode will be ignored.
+ warning.  neutron table inconsistent with mode will be ignored.
+ m6: 1001.50c 0.16669048 8016.24c 0.565556984                         
+ warning.  neutron table inconsistent with mode will be ignored.
+ warning.  neutron table inconsistent with mode will be ignored.
+          12000 0.006096109 13027.60c 0.021431633 14000 0.190503405   
+ warning.  neutron table inconsistent with mode will be ignored.
+          16000 0.003190932 20000.60c 0.034885936 26000 0.011644521   
+ warning.  neutron table inconsistent with mode will be ignored.
+ m8: 16000 0.333333 1001.50c 0.666667                                 
+ warning.  neutron table inconsistent with mode will be ignored.
+ 
+ warning.   321 surfaces were deleted for being the same as others.
+ warning.    19 energy bins of tally  14 are below energy cutoff.
+ imcn   is done
+ runtpe already exists.  runtpf is created instead.
+ runtpf already exists.  runtpg is created instead.
+ runtpg already exists.  runtph is created instead.
+ runtph already exists.  runtpi is created instead.
+ runtpi already exists.  runtpj is created instead.
+ warning.  material    7 has been set to a conductor.
+ dump    1 on file runtpj     nps =           0  coll =              0
+                              ctm =      0.00     nrn =              0
+ xact   is done
+ dynamic storage =         0 words,          0 bytes.      cp0 =  0.01
+ dump    2 on file runtpj     nps =     3335404  coll =       27807201
+                              ctm =     15.01     nrn =      331216756
+ dump    3 on file runtpj     nps =     6670812  coll =       55609190
+                              ctm =     30.02     nrn =      662358232
+ dump    4 on file runtpj     nps =     9975364  coll =       83156979
+                              ctm =     45.03     nrn =      990496496
+ dump    5 on file runtpj     nps =    13315697  coll =      111002168
+                              ctm =     60.03     nrn =     1322140206
+ dump    6 on file runtpj     nps =    16627764  coll =      138608118
+                              ctm =     75.04     nrn =     1650955292
+ dump    7 on file runtpj     nps =    19965910  coll =      166444360
+                              ctm =     90.05     nrn =     1982497460
+ dump    8 on file runtpj     nps =    23304207  coll =      194276508
+                              ctm =    105.06     nrn =     2314000676
+ dump    9 on file runtpj     nps =    26642490  coll =      222108638
+                              ctm =    120.07     nrn =     2645531134
+ dump   10 on file runtpj     nps =    29981235  coll =      249947553
+                              ctm =    135.08     nrn =     2977122356
+ dump   11 on file runtpj     nps =    33319151  coll =      277770674
+                              ctm =    150.10     nrn =     3308554667
+ dump   12 on file runtpj     nps =    36654755  coll =      305602276
+                              ctm =    165.10     nrn =     3640075565
+ dump   13 on file runtpj     nps =    39992400  coll =      333424161
+                              ctm =    180.11     nrn =     3971463967
+ dump   14 on file runtpj     nps =    43332341  coll =      361270097
+                              ctm =    195.12     nrn =     4303143161
+ dump   15 on file runtpj     nps =    46669636  coll =      389090269
+                              ctm =    210.13     nrn =     4634502024
+ dump   16 on file runtpj     nps =    50006931  coll =      416927548
+                              ctm =    225.14     nrn =     4966073179
+ dump   17 on file runtpj     nps =    53344252  coll =      444748440
+                              ctm =    240.14     nrn =     5297478552
+ dump   18 on file runtpj     nps =    56683456  coll =      472591215
+                              ctm =    255.15     nrn =     5629099738
+ dump   19 on file runtpj     nps =    60020546  coll =      500411942
+                              ctm =    270.15     nrn =     5960507190
+ dump   20 on file runtpj     nps =    63357980  coll =      528231788
+                              ctm =    285.16     nrn =     6291853680
+ dump   21 on file runtpj     nps =    66695039  coll =      556034517
+                              ctm =    300.16     nrn =     6623031285
+ dump   22 on file runtpj     nps =    70031924  coll =      583842558
+                              ctm =    315.17     nrn =     6954261656
+ dump   23 on file runtpj     nps =    73372030  coll =      611700192
+                              ctm =    330.18     nrn =     7286073817
+ dump   24 on file runtpj     nps =    76712618  coll =      639547589
+                              ctm =    345.19     nrn =     7617763384
+ dump   25 on file runtpj     nps =    80049503  coll =      667371655
+                              ctm =    360.20     nrn =     7949226949
+ dump   26 on file runtpj     nps =    83386388  coll =      695194008
+                              ctm =    375.21     nrn =     8280640691
+ dump   27 on file runtpj     nps =    86719619  coll =      722984818
+                              ctm =    390.21     nrn =     8611673444
+ dump   28 on file runtpj     nps =    90056186  coll =      750801795
+                              ctm =    405.22     nrn =     8942991743
+ dump   29 on file runtpj     nps =    93393728  coll =      778620255
+                              ctm =    420.23     nrn =     9274357874
+ dump   30 on file runtpj     nps =    96723614  coll =      806379646
+                              ctm =    435.24     nrn =     9605000708
+ run terminated when 100000000 particle histories were done.
+ warning.  tally  14 tfc bin did not pass  1 of 10 statistical checks.
+ warning.     1 of   1 tallies did not pass all 10 statistical checks.
+ warning.     1 of   1 tallies had bins with large relative errors.
+ dump   31 on file runtpj     nps =   100000000  coll =      833688406
+                              ctm =    450.22     nrn =     9930289358
+ mcrun  is done
