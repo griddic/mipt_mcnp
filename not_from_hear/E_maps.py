@@ -43,7 +43,6 @@ counter = 0
 for nd in divisors(N):
     for md in divisors(M):
         if nd*md >= L and nd*md <= R:
-            print nd, md
             counter += 1
 print counter
 
