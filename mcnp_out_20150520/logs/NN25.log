@@ -1,0 +1,169 @@
+ mcnpx    ver=2.5e  ld=Mon Feb 23 08:00:00 MST 2004   05/15/15 04:05:07
+
+ *****************************************************
+ *                                                   *
+ *            Copyright Notice for MCNPX             *
+ *                                                   *
+ * This program was prepared by the Regents of the   *
+ * University of California at Los Alamos National   *
+ * Laboratory (the University) under contract number *
+ * W-7405-ENG-36 with the U.S. Department of Energy  *
+ * (DOE).  The University has certain rights in the  *
+ * program pursuant to the contract and the program  *
+ * should not be copied or distributed outside your  *
+ * organization.   All rights in the program are     *
+ * reserved by the DOE and the University.  Neither  *
+ * the U.S. Government nor the University makes any  *
+ * warranty, express or implied, or assumes any      *
+ * liability or responsibility for the use of this   *
+ * software.                                         *
+ *                                                   *
+ *****************************************************
+ 
+ warning.   374 surfaces were deleted for being the same as others.
+ imcn   is done
+ runtpe already exists.  runtpf is created instead.
+ runtpf already exists.  runtpg is created instead.
+ runtpg already exists.  runtph is created instead.
+ runtph already exists.  runtpi is created instead.
+ dump    1 on file runtpi     nps =           0  coll =              0
+                              ctm =      0.00     nrn =              0
+ xact   is done
+ dynamic storage =         0 words,          0 bytes.      cp0 =  0.01
+ dump    2 on file runtpi     nps =     1501343  coll =       69327816
+                              ctm =     15.01     nrn =     1072664113
+ dump    3 on file runtpi     nps =     3004371  coll =      138661633
+                              ctm =     30.02     nrn =     2145325738
+ dump    4 on file runtpi     nps =     4505364  coll =      207922863
+                              ctm =     45.04     nrn =     3216974960
+ dump    5 on file runtpi     nps =     6007075  coll =      277298699
+                              ctm =     60.05     nrn =     4290533000
+ dump    6 on file runtpi     nps =     7508068  coll =      346508053
+                              ctm =     75.06     nrn =     5361404761
+ dump    7 on file runtpi     nps =     9010728  coll =      415814564
+                              ctm =     90.07     nrn =     6433707542
+ dump    8 on file runtpi     nps =    10511721  coll =      485141056
+                              ctm =    105.07     nrn =     7506369396
+ dump    9 on file runtpi     nps =    12015817  coll =      554533889
+                              ctm =    120.08     nrn =     8580043497
+ dump   10 on file runtpi     nps =    13517041  coll =      623902409
+                              ctm =    135.08     nrn =     9653390976
+ dump   11 on file runtpi     nps =    15017803  coll =      693188132
+                              ctm =    150.09     nrn =    10725444717
+ dump   12 on file runtpi     nps =    16497220  coll =      761410622
+                              ctm =    165.09     nrn =    11780947790
+ dump   13 on file runtpi     nps =    17987072  coll =      830180812
+                              ctm =    180.10     nrn =    12845046986
+ dump   14 on file runtpi     nps =    19489280  coll =      899553005
+                              ctm =    195.12     nrn =    13918428797
+ dump   15 on file runtpi     nps =    20972248  coll =      967984128
+                              ctm =    210.13     nrn =    14977097446
+ dump   16 on file runtpi     nps =    22475600  coll =     1037358732
+                              ctm =    225.14     nrn =    16050417470
+ dump   17 on file runtpi     nps =    23976528  coll =     1106793395
+                              ctm =    240.15     nrn =    17124795526
+ dump   18 on file runtpi     nps =    25481216  coll =     1176268562
+                              ctm =    255.17     nrn =    18199761347
+ dump   19 on file runtpi     nps =    26983424  coll =     1245682783
+                              ctm =    270.18     nrn =    19273840128
+ dump   20 on file runtpi     nps =    28487680  coll =     1315075397
+                              ctm =    285.19     nrn =    20347511717
+ dump   21 on file runtpi     nps =    29992067  coll =     1384536396
+                              ctm =    300.20     nrn =    21422483740
+ dump   22 on file runtpi     nps =    31494225  coll =     1453901235
+                              ctm =    315.21     nrn =    22495674072
+ dump   23 on file runtpi     nps =    32994440  coll =     1523187646
+                              ctm =    330.22     nrn =    23567804595
+ dump   24 on file runtpi     nps =    34494605  coll =     1592437212
+                              ctm =    345.22     nrn =    24639351667
+ dump   25 on file runtpi     nps =    35994820  coll =     1661721079
+                              ctm =    360.23     nrn =    25711341889
+ dump   26 on file runtpi     nps =    37496700  coll =     1731109174
+                              ctm =    375.24     nrn =    26785094098
+ dump   27 on file runtpi     nps =    39000245  coll =     1800521652
+                              ctm =    390.26     nrn =    27859082689
+ dump   28 on file runtpi     nps =    40500410  coll =     1869737097
+                              ctm =    405.27     nrn =    28929922623
+ dump   29 on file runtpi     nps =    42002290  coll =     1939016838
+                              ctm =    420.27     nrn =    30001718426
+ dump   30 on file runtpi     nps =    43504120  coll =     2008392598
+                              ctm =    435.28     nrn =    31075172381
+ dump   31 on file runtpi     nps =    45005950  coll =     2077674455
+                              ctm =    450.30     nrn =    32147102417
+ dump   32 on file runtpi     nps =    46506215  coll =     2146983902
+                              ctm =    465.30     nrn =    33219475601
+ dump   33 on file runtpi     nps =    48008045  coll =     2216328758
+                              ctm =    480.31     nrn =    34292431049
+ dump   34 on file runtpi     nps =    49513492  coll =     2285885058
+                              ctm =    495.33     nrn =    35368785054
+ dump   35 on file runtpi     nps =    51017890  coll =     2355380419
+                              ctm =    510.33     nrn =    36444112620
+ dump   36 on file runtpi     nps =    52522288  coll =     2424802001
+                              ctm =    525.34     nrn =    37518260378
+ dump   37 on file runtpi     nps =    54027688  coll =     2494252434
+                              ctm =    540.35     nrn =    38592741762
+ dump   38 on file runtpi     nps =    55533752  coll =     2563850769
+                              ctm =    555.36     nrn =    39669825904
+ dump   39 on file runtpi     nps =    57038150  coll =     2633358921
+                              ctm =    570.37     nrn =    40745447306
+ dump   40 on file runtpi     nps =    58545186  coll =     2702964002
+                              ctm =    585.38     nrn =    41822478484
+ dump   41 on file runtpi     nps =    60051250  coll =     2772463595
+                              ctm =    600.40     nrn =    42897811993
+ dump   42 on file runtpi     nps =    61556690  coll =     2842014049
+                              ctm =    615.41     nrn =    43973972349
+ dump   43 on file runtpi     nps =    63063658  coll =     2911608196
+                              ctm =    630.42     nrn =    45050799484
+ dump   44 on file runtpi     nps =    64570626  coll =     2981159216
+                              ctm =    645.43     nrn =    46126976358
+ dump   45 on file runtpi     nps =    66076108  coll =     3050630787
+                              ctm =    660.44     nrn =    47201847760
+ dump   46 on file runtpi     nps =    67581409  coll =     3120116412
+                              ctm =    675.45     nrn =    48276914354
+ dump   47 on file runtpi     nps =    69086710  coll =     3189706516
+                              ctm =    690.46     nrn =    49353782490
+ dump   48 on file runtpi     nps =    70590525  coll =     3259095756
+                              ctm =    705.47     nrn =    50427499990
+ dump   49 on file runtpi     nps =    72095826  coll =     3328535458
+                              ctm =    720.48     nrn =    51501908983
+ dump   50 on file runtpi     nps =    73602794  coll =     3398146916
+                              ctm =    735.50     nrn =    52579105718
+ dump   51 on file runtpi     nps =    75108276  coll =     3467637911
+                              ctm =    750.50     nrn =    53654222950
+ dump   52 on file runtpi     nps =    76613731  coll =     3537184971
+                              ctm =    765.51     nrn =    54730344666
+ dump   53 on file runtpi     nps =    78120904  coll =     3606725197
+                              ctm =    780.53     nrn =    55806176264
+ dump   54 on file runtpi     nps =    79627108  coll =     3676222365
+                              ctm =    795.53     nrn =    56881418058
+ dump   55 on file runtpi     nps =    81133312  coll =     3745744539
+                              ctm =    810.55     nrn =    57957151965
+ dump   56 on file runtpi     nps =    82638908  coll =     3815208859
+                              ctm =    825.55     nrn =    59031853584
+ dump   57 on file runtpi     nps =    84145112  coll =     3884713215
+                              ctm =    840.57     nrn =    60107328244
+ dump   58 on file runtpi     nps =    85651316  coll =     3954200364
+                              ctm =    855.58     nrn =    61182410049
+ dump   59 on file runtpi     nps =    87155852  coll =     4023561131
+                              ctm =    870.58     nrn =    62255538346
+ dump   60 on file runtpi     nps =    88662056  coll =     4093155722
+                              ctm =    885.58     nrn =    63332440338
+ dump   61 on file runtpi     nps =    90168712  coll =     4162785654
+                              ctm =    900.60     nrn =    64409937210
+ dump   62 on file runtpi     nps =    91676584  coll =     4232425592
+                              ctm =    915.61     nrn =    65487510311
+ dump   63 on file runtpi     nps =    93181120  coll =     4301942661
+                              ctm =    930.62     nrn =    66563189374
+ dump   64 on file runtpi     nps =    94685656  coll =     4371377181
+                              ctm =    945.63     nrn =    67637398511
+ dump   65 on file runtpi     nps =    96191860  coll =     4440962761
+                              ctm =    960.64     nrn =    68714170444
+ dump   66 on file runtpi     nps =    97698064  coll =     4510462687
+                              ctm =    975.64     nrn =    69789395429
+ dump   67 on file runtpi     nps =    99203116  coll =     4579946537
+                              ctm =    990.64     nrn =    70864442015
+ run terminated when 100000000 particle histories were done.
+ warning.     1 of   1 tallies had bins with large relative errors.
+ dump   68 on file runtpi     nps =   100000000  coll =     4616798990
+                              ctm =    998.58     nrn =    71434692905
+ mcrun  is done

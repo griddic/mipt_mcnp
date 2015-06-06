@@ -1,0 +1,146 @@
+ mcnpx    ver=2.5e  ld=Mon Feb 23 08:00:00 MST 2004   05/19/15 01:02:44
+
+ *****************************************************
+ *                                                   *
+ *            Copyright Notice for MCNPX             *
+ *                                                   *
+ * This program was prepared by the Regents of the   *
+ * University of California at Los Alamos National   *
+ * Laboratory (the University) under contract number *
+ * W-7405-ENG-36 with the U.S. Department of Energy  *
+ * (DOE).  The University has certain rights in the  *
+ * program pursuant to the contract and the program  *
+ * should not be copied or distributed outside your  *
+ * organization.   All rights in the program are     *
+ * reserved by the DOE and the University.  Neither  *
+ * the U.S. Government nor the University makes any  *
+ * warranty, express or implied, or assumes any      *
+ * liability or responsibility for the use of this   *
+ * software.                                         *
+ *                                                   *
+ *****************************************************
+ m5: 1001.50c 0.433013139 8016.24c 0.254732249 6000 0.007709002       
+ warning.  neutron table inconsistent with mode will be ignored.
+ warning.  neutron table inconsistent with mode will be ignored.
+          12000 0.002737254 13027.60c 0.009664184 14000 0.086027996   
+ warning.  neutron table inconsistent with mode will be ignored.
+          16000 0.001452421 20000.60c 0.015641454 26000 0.00525106    
+ warning.  neutron table inconsistent with mode will be ignored.
+          5010.60c 0.00420085 5011.60c 0.00105021 22000 0.178520181   
+ warning.  neutron table inconsistent with mode will be ignored.
+ warning.  neutron table inconsistent with mode will be ignored.
+ m6: 1001.50c 0.16669048 8016.24c 0.565556984                         
+ warning.  neutron table inconsistent with mode will be ignored.
+ warning.  neutron table inconsistent with mode will be ignored.
+          12000 0.006096109 13027.60c 0.021431633 14000 0.190503405   
+ warning.  neutron table inconsistent with mode will be ignored.
+          16000 0.003190932 20000.60c 0.034885936 26000 0.011644521   
+ warning.  neutron table inconsistent with mode will be ignored.
+ m8: 16000 0.333333 1001.50c 0.666667                                 
+ warning.  neutron table inconsistent with mode will be ignored.
+ 
+ warning.   374 surfaces were deleted for being the same as others.
+ warning.    19 energy bins of tally  14 are below energy cutoff.
+ imcn   is done
+ runtpe already exists.  runtpf is created instead.
+ runtpf already exists.  runtpg is created instead.
+ runtpg already exists.  runtph is created instead.
+ runtph already exists.  runtpi is created instead.
+ warning.  material    7 has been set to a conductor.
+ dump    1 on file runtpi     nps =           0  coll =              0
+                              ctm =      0.00     nrn =              0
+ xact   is done
+ dynamic storage =         0 words,          0 bytes.      cp0 =  0.01
+ dump    2 on file runtpi     nps =     2293070  coll =       17839849
+                              ctm =     15.01     nrn =      213532599
+ dump    3 on file runtpi     nps =     4586140  coll =       35675834
+                              ctm =     30.03     nrn =      426999187
+ dump    4 on file runtpi     nps =     6879960  coll =       53514203
+                              ctm =     45.04     nrn =      640499538
+ dump    5 on file runtpi     nps =     9175010  coll =       71361675
+                              ctm =     60.06     nrn =      854121570
+ dump    6 on file runtpi     nps =    11470226  coll =       89221191
+                              ctm =     75.07     nrn =     1067864252
+ dump    7 on file runtpi     nps =    13765202  coll =      107075813
+                              ctm =     90.08     nrn =     1281551521
+ dump    8 on file runtpi     nps =    16057604  coll =      124899757
+                              ctm =    105.08     nrn =     1494885598
+ dump    9 on file runtpi     nps =    18352566  coll =      142756883
+                              ctm =    120.10     nrn =     1708603945
+ dump   10 on file runtpi     nps =    20645490  coll =      160610476
+                              ctm =    135.11     nrn =     1922277726
+ dump   11 on file runtpi     nps =    22940452  coll =      178463568
+                              ctm =    150.12     nrn =     2135955823
+ dump   12 on file runtpi     nps =    25232868  coll =      196295669
+                              ctm =    165.12     nrn =     2349402683
+ dump   13 on file runtpi     nps =    27525284  coll =      214138216
+                              ctm =    180.13     nrn =     2562957963
+ dump   14 on file runtpi     nps =    29817700  coll =      231973096
+                              ctm =    195.14     nrn =     2776414466
+ dump   15 on file runtpi     nps =    32110116  coll =      249805753
+                              ctm =    210.14     nrn =     2989866354
+ dump   16 on file runtpi     nps =    34399986  coll =      267620469
+                              ctm =    225.15     nrn =     3203109688
+ dump   17 on file runtpi     nps =    36692402  coll =      285476144
+                              ctm =    240.16     nrn =     3416815582
+ dump   18 on file runtpi     nps =    38985834  coll =      303308313
+                              ctm =    255.17     nrn =     3630266588
+ dump   19 on file runtpi     nps =    41280796  coll =      321162223
+                              ctm =    270.18     nrn =     3843954688
+ dump   20 on file runtpi     nps =    43574742  coll =      339004828
+                              ctm =    285.19     nrn =     4057501485
+ dump   21 on file runtpi     nps =    45868174  coll =      356849283
+                              ctm =    300.21     nrn =     4271066577
+ dump   22 on file runtpi     nps =    48159574  coll =      374671687
+                              ctm =    315.21     nrn =     4484395850
+ dump   23 on file runtpi     nps =    50453006  coll =      392515574
+                              ctm =    330.22     nrn =     4697949517
+ dump   24 on file runtpi     nps =    52746952  coll =      410361210
+                              ctm =    345.24     nrn =     4911568616
+ dump   25 on file runtpi     nps =    55040384  coll =      428199758
+                              ctm =    360.24     nrn =     5125072418
+ dump   26 on file runtpi     nps =    57334330  coll =      446048698
+                              ctm =    375.24     nrn =     5338696954
+ dump   27 on file runtpi     nps =    59627762  coll =      463881646
+                              ctm =    390.24     nrn =     5552176721
+ dump   28 on file runtpi     nps =    61918648  coll =      481704963
+                              ctm =    405.24     nrn =     5765487264
+ dump   29 on file runtpi     nps =    64212594  coll =      499543356
+                              ctm =    420.25     nrn =     5978968914
+ dump   30 on file runtpi     nps =    66493296  coll =      517283089
+                              ctm =    435.26     nrn =     6191302193
+ dump   31 on file runtpi     nps =    68787242  coll =      535134479
+                              ctm =    450.27     nrn =     6404965479
+ dump   32 on file runtpi     nps =    71078128  coll =      552944961
+                              ctm =    465.28     nrn =     6618154503
+ dump   33 on file runtpi     nps =    73372074  coll =      570803214
+                              ctm =    480.29     nrn =     6831877064
+ dump   34 on file runtpi     nps =    75665506  coll =      588646587
+                              ctm =    495.29     nrn =     7045446749
+ dump   35 on file runtpi     nps =    77915584  coll =      606148147
+                              ctm =    510.30     nrn =     7254942240
+ dump   36 on file runtpi     nps =    80207728  coll =      623974939
+                              ctm =    525.30     nrn =     7468338171
+ dump   37 on file runtpi     nps =    82500032  coll =      641811668
+                              ctm =    540.31     nrn =     7681828957
+ dump   38 on file runtpi     nps =    84792176  coll =      659636717
+                              ctm =    555.32     nrn =     7895205065
+ dump   39 on file runtpi     nps =    87084320  coll =      677478893
+                              ctm =    570.33     nrn =     8108758037
+ dump   40 on file runtpi     nps =    89340639  coll =      695030051
+                              ctm =    585.34     nrn =     8318798199
+ dump   41 on file runtpi     nps =    91635257  coll =      712882075
+                              ctm =    600.36     nrn =     8532481112
+ dump   42 on file runtpi     nps =    93926500  coll =      730699776
+                              ctm =    615.36     nrn =     8745751232
+ dump   43 on file runtpi     nps =    96220494  coll =      748552623
+                              ctm =    630.37     nrn =     8959417165
+ dump   44 on file runtpi     nps =    98515152  coll =      766395758
+                              ctm =    645.38     nrn =     9172971869
+ run terminated when 100000000 particle histories were done.
+ warning.  tally  14 tfc bin did not pass  1 of 10 statistical checks.
+ warning.     1 of   1 tallies did not pass all 10 statistical checks.
+ warning.     1 of   1 tallies had bins with large relative errors.
+ dump   45 on file runtpi     nps =   100000000  coll =      777952410
+                              ctm =    655.10     nrn =     9311304327
+ mcrun  is done

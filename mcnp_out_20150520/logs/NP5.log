@@ -1,0 +1,234 @@
+ mcnpx    ver=2.5e  ld=Mon Feb 23 08:00:00 MST 2004   05/18/15 09:39:47
+
+ *****************************************************
+ *                                                   *
+ *            Copyright Notice for MCNPX             *
+ *                                                   *
+ * This program was prepared by the Regents of the   *
+ * University of California at Los Alamos National   *
+ * Laboratory (the University) under contract number *
+ * W-7405-ENG-36 with the U.S. Department of Energy  *
+ * (DOE).  The University has certain rights in the  *
+ * program pursuant to the contract and the program  *
+ * should not be copied or distributed outside your  *
+ * organization.   All rights in the program are     *
+ * reserved by the DOE and the University.  Neither  *
+ * the U.S. Government nor the University makes any  *
+ * warranty, express or implied, or assumes any      *
+ * liability or responsibility for the use of this   *
+ * software.                                         *
+ *                                                   *
+ *****************************************************
+ mode: n P                                                            
+ warning.  photonuclear physics may be needed (phys:p).
+ 
+ warning.   374 surfaces were deleted for being the same as others.
+ warning.    19 energy bins of tally  14 are below energy cutoff.
+ imcn   is done
+ runtpe already exists.  runtpf is created instead.
+ runtpf already exists.  runtpg is created instead.
+ runtpg already exists.  runtph is created instead.
+ runtph already exists.  runtpi is created instead.
+ runtpi already exists.  runtpj is created instead.
+ runtpj already exists.  runtpk is created instead.
+ runtpk already exists.  runtpl is created instead.
+ runtpl already exists.  runtpm is created instead.
+ runtpm already exists.  runtpn is created instead.
+ runtpn already exists.  runtpo is created instead.
+ runtpo already exists.  runtpp is created instead.
+ runtpp already exists.  runtpq is created instead.
+ runtpq already exists.  runtpr is created instead.
+ runtpr already exists.  runtps is created instead.
+ runtps already exists.  runtpt is created instead.
+ runtpt already exists.  runtpu is created instead.
+ runtpu already exists.  runtpv is created instead.
+ runtpv already exists.  runtpw is created instead.
+ runtpw already exists.  runtpx is created instead.
+ warning.  material    7 has been set to a conductor.
+ dump    1 on file runtpx     nps =           0  coll =              0
+                              ctm =      0.00     nrn =              0
+ xact   is done
+ dynamic storage =         0 words,          0 bytes.      cp0 =  0.02
+ dump    2 on file runtpx     nps =     1120344  coll =       56711373
+                              ctm =     15.00     nrn =      901997253
+ dump    3 on file runtpx     nps =     2239393  coll =      113438486
+                              ctm =     30.01     nrn =     1804320453
+ dump    4 on file runtpx     nps =     3357832  coll =      170027536
+                              ctm =     45.02     nrn =     2704390283
+ dump    5 on file runtpx     nps =     4477474  coll =      226678996
+                              ctm =     60.03     nrn =     3605415417
+ dump    6 on file runtpx     nps =     5597312  coll =      283336058
+                              ctm =     75.04     nrn =     4506275523
+ dump    7 on file runtpx     nps =     6716907  coll =      340004308
+                              ctm =     90.04     nrn =     5407677658
+ dump    8 on file runtpx     nps =     7836618  coll =      396695882
+                              ctm =    105.05     nrn =     6309369311
+ dump    9 on file runtpx     nps =     8956329  coll =      453407699
+                              ctm =    120.07     nrn =     7211345646
+ dump   10 on file runtpx     nps =    10036262  coll =      508101548
+                              ctm =    135.07     nrn =     8081368088
+ dump   11 on file runtpx     nps =    11156120  coll =      564886000
+                              ctm =    150.08     nrn =     8984535764
+ dump   12 on file runtpx     nps =    12276159  coll =      621633964
+                              ctm =    165.09     nrn =     9887049013
+ dump   13 on file runtpx     nps =    13397491  coll =      678395017
+                              ctm =    180.10     nrn =    10789654828
+ dump   14 on file runtpx     nps =    14517040  coll =      735064746
+                              ctm =    195.10     nrn =    11690874230
+ dump   15 on file runtpx     nps =    15617658  coll =      790788595
+                              ctm =    210.11     nrn =    12577138059
+ dump   16 on file runtpx     nps =    16740832  coll =      847651512
+                              ctm =    225.12     nrn =    13481459481
+ dump   17 on file runtpx     nps =    17861474  coll =      904368616
+                              ctm =    240.13     nrn =    14383497063
+ dump   18 on file runtpx     nps =    18980877  coll =      961051324
+                              ctm =    255.13     nrn =    15285053028
+ dump   19 on file runtpx     nps =    20102040  coll =     1017901345
+                              ctm =    270.14     nrn =    16189466641
+ dump   20 on file runtpx     nps =    21222760  coll =     1074702377
+                              ctm =    285.15     nrn =    17092850715
+ dump   21 on file runtpx     nps =    22342480  coll =     1131380425
+                              ctm =    300.16     nrn =    17994172549
+ dump   22 on file runtpx     nps =    23462960  coll =     1188144794
+                              ctm =    315.17     nrn =    18897002608
+ dump   23 on file runtpx     nps =    24584680  coll =     1244947688
+                              ctm =    330.18     nrn =    19800319180
+ dump   24 on file runtpx     nps =    25707590  coll =     1301729661
+                              ctm =    345.20     nrn =    20703492708
+ dump   25 on file runtpx     nps =    26830006  coll =     1358528983
+                              ctm =    360.21     nrn =    21606806024
+ dump   26 on file runtpx     nps =    27953111  coll =     1415314684
+                              ctm =    375.22     nrn =    22509928132
+ dump   27 on file runtpx     nps =    29074084  coll =     1472100541
+                              ctm =    390.23     nrn =    23413149322
+ dump   28 on file runtpx     nps =    30194707  coll =     1528804331
+                              ctm =    405.23     nrn =    24315032185
+ dump   29 on file runtpx     nps =    31317175  coll =     1585665258
+                              ctm =    420.24     nrn =    25219563937
+ dump   30 on file runtpx     nps =    32437459  coll =     1642372580
+                              ctm =    435.25     nrn =    26121506633
+ dump   31 on file runtpx     nps =    33559154  coll =     1699075665
+                              ctm =    450.25     nrn =    27023347962
+ dump   32 on file runtpx     nps =    34679438  coll =     1755787469
+                              ctm =    465.25     nrn =    27925398206
+ dump   33 on file runtpx     nps =    35799664  coll =     1812483739
+                              ctm =    480.27     nrn =    28827085356
+ dump   34 on file runtpx     nps =    36919890  coll =     1869210831
+                              ctm =    495.27     nrn =    29729154064
+ dump   35 on file runtpx     nps =    38041416  coll =     1925887481
+                              ctm =    510.29     nrn =    30630438047
+ dump   36 on file runtpx     nps =    39162884  coll =     1982591785
+                              ctm =    525.29     nrn =    31532403837
+ dump   37 on file runtpx     nps =    40284410  coll =     2039411001
+                              ctm =    540.31     nrn =    32436184195
+ dump   38 on file runtpx     nps =    41405878  coll =     2096163599
+                              ctm =    555.31     nrn =    33338999700
+ dump   39 on file runtpx     nps =    42526162  coll =     2152829484
+                              ctm =    570.31     nrn =    34240177459
+ dump   40 on file runtpx     nps =    43646446  coll =     2209587285
+                              ctm =    585.32     nrn =    35142993375
+ dump   41 on file runtpx     nps =    44765488  coll =     2266288445
+                              ctm =    600.32     nrn =    36044744626
+ dump   42 on file runtpx     nps =    45886898  coll =     2322941213
+                              ctm =    615.34     nrn =    36945668222
+ dump   43 on file runtpx     nps =    47008424  coll =     2379774784
+                              ctm =    630.35     nrn =    37849611945
+ dump   44 on file runtpx     nps =    48129950  coll =     2436552794
+                              ctm =    645.37     nrn =    38752757056
+ dump   45 on file runtpx     nps =    49251440  coll =     2493278518
+                              ctm =    660.37     nrn =    39654968851
+ dump   46 on file runtpx     nps =    50372626  coll =     2550091612
+                              ctm =    675.38     nrn =    40558684512
+ dump   47 on file runtpx     nps =    51493812  coll =     2606899669
+                              ctm =    690.39     nrn =    41462232889
+ dump   48 on file runtpx     nps =    52612512  coll =     2663517152
+                              ctm =    705.39     nrn =    42362833496
+ dump   49 on file runtpx     nps =    53735256  coll =     2720412398
+                              ctm =    720.40     nrn =    43267825611
+ dump   50 on file runtpx     nps =    54857685  coll =     2777160116
+                              ctm =    735.42     nrn =    44170326809
+ dump   51 on file runtpx     nps =    55978871  coll =     2833916531
+                              ctm =    750.42     nrn =    45072923436
+ dump   52 on file runtpx     nps =    57100057  coll =     2890625530
+                              ctm =    765.42     nrn =    45974719137
+ dump   53 on file runtpx     nps =    58221558  coll =     2947493175
+                              ctm =    780.43     nrn =    46879370731
+ dump   54 on file runtpx     nps =    59343987  coll =     3004259695
+                              ctm =    795.45     nrn =    47782192472
+ dump   55 on file runtpx     nps =    60463930  coll =     3061007775
+                              ctm =    810.45     nrn =    48684751936
+ dump   56 on file runtpx     nps =    61566786  coll =     3116872261
+                              ctm =    825.46     nrn =    49573135618
+ dump   57 on file runtpx     nps =    62687972  coll =     3173601833
+                              ctm =    840.46     nrn =    50475435562
+ dump   58 on file runtpx     nps =    63810401  coll =     3230420972
+                              ctm =    855.47     nrn =    51379066575
+ dump   59 on file runtpx     nps =    64930344  coll =     3287124865
+                              ctm =    870.48     nrn =    52280933207
+ dump   60 on file runtpx     nps =    66050602  coll =     3343934903
+                              ctm =    885.48     nrn =    53184582706
+ dump   61 on file runtpx     nps =    67173031  coll =     3400766981
+                              ctm =    900.49     nrn =    54088417919
+ dump   62 on file runtpx     nps =    68294217  coll =     3457533655
+                              ctm =    915.49     nrn =    54991275409
+ dump   63 on file runtpx     nps =    69397836  coll =     3513502882
+                              ctm =    930.50     nrn =    55881702519
+ dump   64 on file runtpx     nps =    70518259  coll =     3570240917
+                              ctm =    945.51     nrn =    56784116519
+ dump   65 on file runtpx     nps =    71639445  coll =     3626970748
+                              ctm =    960.52     nrn =    57686345828
+ dump   66 on file runtpx     nps =    72760631  coll =     3683844439
+                              ctm =    975.53     nrn =    58591032812
+ dump   67 on file runtpx     nps =    73883375  coll =     3740620637
+                              ctm =    990.53     nrn =    59493884278
+ dump   68 on file runtpx     nps =    75004561  coll =     3797450207
+                              ctm =   1005.53     nrn =    60397775836
+ dump   69 on file runtpx     nps =    76125747  coll =     3854089183
+                              ctm =   1020.54     nrn =    61298456321
+ dump   70 on file runtpx     nps =    77248176  coll =     3910900504
+                              ctm =   1035.55     nrn =    62201947815
+ dump   71 on file runtpx     nps =    78369677  coll =     3967538077
+                              ctm =   1050.55     nrn =    63102670593
+ dump   72 on file runtpx     nps =    79490863  coll =     4024318565
+                              ctm =   1065.57     nrn =    64005774570
+ dump   73 on file runtpx     nps =    80612049  coll =     4081078181
+                              ctm =   1080.58     nrn =    64908424675
+ dump   74 on file runtpx     nps =    81733235  coll =     4137848053
+                              ctm =   1095.58     nrn =    65811303268
+ dump   75 on file runtpx     nps =    82854736  coll =     4194626105
+                              ctm =   1110.59     nrn =    66714240633
+ dump   76 on file runtpx     nps =    83975922  coll =     4251347696
+                              ctm =   1125.59     nrn =    67616388051
+ dump   77 on file runtpx     nps =    85097108  coll =     4308095911
+                              ctm =   1140.60     nrn =    68519143907
+ dump   78 on file runtpx     nps =    86218294  coll =     4364874124
+                              ctm =   1155.61     nrn =    69422093331
+ dump   79 on file runtpx     nps =    87339480  coll =     4421526886
+                              ctm =   1170.61     nrn =    70323084674
+ dump   80 on file runtpx     nps =    88460666  coll =     4478284416
+                              ctm =   1185.62     nrn =    71225679053
+ dump   81 on file runtpx     nps =    89581852  coll =     4535053415
+                              ctm =   1200.62     nrn =    72128602611
+ dump   82 on file runtpx     nps =    90701182  coll =     4591718094
+                              ctm =   1215.62     nrn =    73029783100
+ dump   83 on file runtpx     nps =    91822368  coll =     4648537577
+                              ctm =   1230.63     nrn =    73933435839
+ dump   84 on file runtpx     nps =    92943554  coll =     4705348095
+                              ctm =   1245.63     nrn =    74836972143
+ dump   85 on file runtpx     nps =    94064740  coll =     4762092222
+                              ctm =   1260.64     nrn =    75739563875
+ dump   86 on file runtpx     nps =    95183440  coll =     4818785386
+                              ctm =   1275.65     nrn =    76641166708
+ dump   87 on file runtpx     nps =    96304626  coll =     4875638314
+                              ctm =   1290.66     nrn =    77545476961
+ dump   88 on file runtpx     nps =    97427055  coll =     4932472825
+                              ctm =   1305.66     nrn =    78449327988
+ dump   89 on file runtpx     nps =    98548871  coll =     4989270856
+                              ctm =   1320.67     nrn =    79352551919
+ dump   90 on file runtpx     nps =    99668814  coll =     5045961404
+                              ctm =   1335.67     nrn =    80254113415
+ run terminated when 100000000 particle histories were done.
+ warning.     1 of   1 tallies had bins with large relative errors.
+ dump   91 on file runtpx     nps =   100000000  coll =     5062733911
+                              ctm =   1340.11     nrn =    80520880546
+ mcrun  is done

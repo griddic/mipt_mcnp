@@ -1,0 +1,188 @@
+ mcnpx    ver=2.5e  ld=Mon Feb 23 08:00:00 MST 2004   05/15/15 23:31:17
+
+ *****************************************************
+ *                                                   *
+ *            Copyright Notice for MCNPX             *
+ *                                                   *
+ * This program was prepared by the Regents of the   *
+ * University of California at Los Alamos National   *
+ * Laboratory (the University) under contract number *
+ * W-7405-ENG-36 with the U.S. Department of Energy  *
+ * (DOE).  The University has certain rights in the  *
+ * program pursuant to the contract and the program  *
+ * should not be copied or distributed outside your  *
+ * organization.   All rights in the program are     *
+ * reserved by the DOE and the University.  Neither  *
+ * the U.S. Government nor the University makes any  *
+ * warranty, express or implied, or assumes any      *
+ * liability or responsibility for the use of this   *
+ * software.                                         *
+ *                                                   *
+ *****************************************************
+ 
+ warning.   374 surfaces were deleted for being the same as others.
+ imcn   is done
+ runtpe already exists.  runtpf is created instead.
+ runtpf already exists.  runtpg is created instead.
+ runtpg already exists.  runtph is created instead.
+ runtph already exists.  runtpi is created instead.
+ runtpi already exists.  runtpj is created instead.
+ runtpj already exists.  runtpk is created instead.
+ runtpk already exists.  runtpl is created instead.
+ runtpl already exists.  runtpm is created instead.
+ runtpm already exists.  runtpn is created instead.
+ dump    1 on file runtpn     nps =           0  coll =              0
+                              ctm =      0.00     nrn =              0
+ xact   is done
+ dynamic storage =         0 words,          0 bytes.      cp0 =  0.01
+ dump    2 on file runtpn     nps =     1366412  coll =       57602317
+                              ctm =     15.01     nrn =      905885334
+ dump    3 on file runtpn     nps =     2740994  coll =      115510435
+                              ctm =     30.03     nrn =     1816600145
+ dump    4 on file runtpn     nps =     4103590  coll =      172870641
+                              ctm =     45.04     nrn =     2718699872
+ dump    5 on file runtpn     nps =     5478720  coll =      230901343
+                              ctm =     60.04     nrn =     3631450163
+ dump    6 on file runtpn     nps =     6853859  coll =      288781168
+                              ctm =     75.05     nrn =     4541765665
+ dump    7 on file runtpn     nps =     8230075  coll =      346739462
+                              ctm =     90.06     nrn =     5453268033
+ dump    8 on file runtpn     nps =     9604365  coll =      404688228
+                              ctm =    105.06     nrn =     6364594642
+ dump    9 on file runtpn     nps =    10980278  coll =      462733842
+                              ctm =    120.08     nrn =     7277474461
+ dump   10 on file runtpn     nps =    12356580  coll =      520726217
+                              ctm =    135.09     nrn =     8189553364
+ dump   11 on file runtpn     nps =    13731100  coll =      578737140
+                              ctm =    150.10     nrn =     9101960896
+ dump   12 on file runtpn     nps =    15105620  coll =      636620859
+                              ctm =    165.12     nrn =    10012272636
+ dump   13 on file runtpn     nps =    16480012  coll =      694463901
+                              ctm =    180.13     nrn =    10922010052
+ dump   14 on file runtpn     nps =    17856350  coll =      752413564
+                              ctm =    195.14     nrn =    11833373614
+ dump   15 on file runtpn     nps =    19231100  coll =      810363564
+                              ctm =    210.14     nrn =    12744837930
+ dump   16 on file runtpn     nps =    20605050  coll =      868322100
+                              ctm =    225.14     nrn =    13656313606
+ dump   17 on file runtpn     nps =    21982125  coll =      926301764
+                              ctm =    240.16     nrn =    14568112469
+ dump   18 on file runtpn     nps =    23357600  coll =      984285306
+                              ctm =    255.16     nrn =    15479880065
+ dump   19 on file runtpn     nps =    24731550  coll =     1042282020
+                              ctm =    270.17     nrn =    16392179947
+ dump   20 on file runtpn     nps =    26107100  coll =     1100198850
+                              ctm =    285.18     nrn =    17302871897
+ dump   21 on file runtpn     nps =    27481050  coll =     1158134619
+                              ctm =    300.19     nrn =    18214147162
+ dump   22 on file runtpn     nps =    28856525  coll =     1216088947
+                              ctm =    315.21     nrn =    19125744265
+ dump   23 on file runtpn     nps =    30232075  coll =     1274125575
+                              ctm =    330.22     nrn =    20038602828
+ dump   24 on file runtpn     nps =    31609075  coll =     1332200752
+                              ctm =    345.24     nrn =    20951860377
+ dump   25 on file runtpn     nps =    32981500  coll =     1390099462
+                              ctm =    360.24     nrn =    21862535579
+ dump   26 on file runtpn     nps =    34355525  coll =     1447939016
+                              ctm =    375.25     nrn =    22772221145
+ dump   27 on file runtpn     nps =    35727950  coll =     1505828522
+                              ctm =    390.26     nrn =    23682680711
+ dump   28 on file runtpn     nps =    37103425  coll =     1563876574
+                              ctm =    405.28     nrn =    24595668358
+ dump   29 on file runtpn     nps =    38475925  coll =     1621720472
+                              ctm =    420.28     nrn =    25505512501
+ dump   30 on file runtpn     nps =    39848350  coll =     1679509970
+                              ctm =    435.28     nrn =    26414211560
+ dump   31 on file runtpn     nps =    41222300  coll =     1737369132
+                              ctm =    450.29     nrn =    27324204091
+ dump   32 on file runtpn     nps =    42596325  coll =     1795310159
+                              ctm =    465.30     nrn =    28235397332
+ dump   33 on file runtpn     nps =    43970350  coll =     1853247522
+                              ctm =    480.31     nrn =    29146677995
+ dump   34 on file runtpn     nps =    45344225  coll =     1911106258
+                              ctm =    495.32     nrn =    30056490915
+ dump   35 on file runtpn     nps =    46719775  coll =     1969176470
+                              ctm =    510.32     nrn =    30969840095
+ dump   36 on file runtpn     nps =    48095325  coll =     2027128176
+                              ctm =    525.34     nrn =    31881197535
+ dump   37 on file runtpn     nps =    49470725  coll =     2085163509
+                              ctm =    540.35     nrn =    32794066137
+ dump   38 on file runtpn     nps =    50844750  coll =     2143081000
+                              ctm =    555.35     nrn =    33704956437
+ dump   39 on file runtpn     nps =    52218775  coll =     2201007672
+                              ctm =    570.36     nrn =    34616114939
+ dump   40 on file runtpn     nps =    53592650  coll =     2258847018
+                              ctm =    585.36     nrn =    35525697628
+ dump   41 on file runtpn     nps =    54968200  coll =     2316871751
+                              ctm =    600.37     nrn =    36438314608
+ dump   42 on file runtpn     nps =    56342225  coll =     2374852999
+                              ctm =    615.37     nrn =    37350478465
+ dump   43 on file runtpn     nps =    57717625  coll =     2432819073
+                              ctm =    630.38     nrn =    38262043302
+ dump   44 on file runtpn     nps =    59093963  coll =     2490803756
+                              ctm =    645.38     nrn =    39174028515
+ dump   45 on file runtpn     nps =    60468889  coll =     2548771163
+                              ctm =    660.40     nrn =    40085632026
+ dump   46 on file runtpn     nps =    61844390  coll =     2606818047
+                              ctm =    675.41     nrn =    40998608472
+ dump   47 on file runtpn     nps =    63219316  coll =     2664766327
+                              ctm =    690.41     nrn =    41910033346
+ dump   48 on file runtpn     nps =    64592716  coll =     2722692062
+                              ctm =    705.42     nrn =    42821065551
+ dump   49 on file runtpn     nps =    65967858  coll =     2780666850
+                              ctm =    720.43     nrn =    43732797413
+ dump   50 on file runtpn     nps =    67342784  coll =     2838623612
+                              ctm =    735.43     nrn =    44644223762
+ dump   51 on file runtpn     nps =    68716184  coll =     2896606716
+                              ctm =    750.44     nrn =    45556338350
+ dump   52 on file runtpn     nps =    70091326  coll =     2954526333
+                              ctm =    765.46     nrn =    46467262932
+ dump   53 on file runtpn     nps =    71466252  coll =     3012390861
+                              ctm =    780.47     nrn =    47377248716
+ dump   54 on file runtpn     nps =    72842704  coll =     3070493602
+                              ctm =    795.48     nrn =    48291199396
+ dump   55 on file runtpn     nps =    74219372  coll =     3128487534
+                              ctm =    810.49     nrn =    49203278553
+ dump   56 on file runtpn     nps =    75592772  coll =     3186350367
+                              ctm =    825.50     nrn =    50113262530
+ dump   57 on file runtpn     nps =    76955133  coll =     3243763674
+                              ctm =    840.52     nrn =    51016295336
+ dump   58 on file runtpn     nps =    78328775  coll =     3301650195
+                              ctm =    855.54     nrn =    51926724254
+ dump   59 on file runtpn     nps =    79702800  coll =     3359566829
+                              ctm =    870.55     nrn =    52837602165
+ dump   60 on file runtpn     nps =    81076825  coll =     3417507750
+                              ctm =    885.55     nrn =    53748880200
+ dump   61 on file runtpn     nps =    82452225  coll =     3475440492
+                              ctm =    900.55     nrn =    54659908699
+ dump   62 on file runtpn     nps =    83826250  coll =     3533371974
+                              ctm =    915.55     nrn =    55571122716
+ dump   63 on file runtpn     nps =    85200275  coll =     3591282668
+                              ctm =    930.55     nrn =    56481888232
+ dump   64 on file runtpn     nps =    86576425  coll =     3649213054
+                              ctm =    945.57     nrn =    57392930948
+ dump   65 on file runtpn     nps =    87951289  coll =     3707132238
+                              ctm =    960.57     nrn =    58303943460
+ dump   66 on file runtpn     nps =    89324687  coll =     3765166004
+                              ctm =    975.58     nrn =    59216845596
+ dump   67 on file runtpn     nps =    90693107  coll =     3822872105
+                              ctm =    990.59     nrn =    60124420239
+ dump   68 on file runtpn     nps =    92050357  coll =     3880136162
+                              ctm =   1005.59     nrn =    61025111697
+ dump   69 on file runtpn     nps =    93425907  coll =     3938078182
+                              ctm =   1020.60     nrn =    61936368220
+ dump   70 on file runtpn     nps =    94798407  coll =     3995879908
+                              ctm =   1035.61     nrn =    62845337786
+ dump   71 on file runtpn     nps =    96173957  coll =     4053922556
+                              ctm =   1050.62     nrn =    63758276106
+ dump   72 on file runtpn     nps =    97549507  coll =     4111893312
+                              ctm =   1065.63     nrn =    64669929357
+ dump   73 on file runtpn     nps =    98924675  coll =     4169903607
+                              ctm =   1080.65     nrn =    65582245978
+ run terminated when 100000000 particle histories were done.
+ warning.  tally  14 tfc bin did not pass  1 of 10 statistical checks.
+ warning.     1 of   1 tallies did not pass all 10 statistical checks.
+ warning.     1 of   1 tallies had bins with large relative errors.
+ dump   74 on file runtpn     nps =   100000000  coll =     4215260771
+                              ctm =   1092.38     nrn =    66295594841
+ mcrun  is done

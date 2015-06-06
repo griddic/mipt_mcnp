@@ -140,6 +140,7 @@ def plot_en_spectrums_in_back_going_flow(file_name, tally_distances, colors, fil
     print pjoin(folder_to_place_images,title + ".png")
     plt.show()
     plt.close()
+    return left, values, width
 
 def plot_sum_en_spectrum_in_back_going_flow(file_names, tally_distances, colors, PP_file_without_sample, folder_to_place_images):
     neutron_file, photon_file = file_names
@@ -202,6 +203,7 @@ def plot_sum_en_spectrum_in_back_going_flow(file_names, tally_distances, colors,
     print pjoin(folder_to_place_images, title + ".png")
     plt.show()
     plt.close()
+    return left, values, width
 
 def plot_dose_in_back_going_flow_for_each_file(names, tally_distanses, PP_file_without_sample, folder_to_place_images):
     legend = []
