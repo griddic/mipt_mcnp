@@ -7,6 +7,8 @@ from os.path import join as pjoin
 from matplotlib import pyplot as plt
 from matplotlib.mlab import griddata
 
+FIGURES_SIZE = (10,6)
+LEGENDS_SIZE = 12
 
 def __parse_name(file_name):
     ans = {}
@@ -100,27 +102,29 @@ def plot_en_spectrums_in_back_going_flow(file_name, tally_distances, colors, fil
         x = 0
         y = 0
         z = 100 - tally_distance - 1.5
-        if mode == 'PP':
-            etalon = construct_initial_spectrum_tally(file_without_sample, x, y, z)
+
+        etalon = construct_initial_spectrum_tally(file_without_sample, x, y, z)
+
         count_tallies = 0
         for tally in tallies:
             if tally.x == x and tally.y == y and tally.z == z:
                 count_tallies += 1
                 kk = tally.values.keys()
                 kk.sort()
+                kk = sorted(kk)
+                #print [x[0] for x in kk]
                 for en_diap in kk:
                     outt.write(str(tally_distance) + ',' + str(en_diap[0]) + ',' + str(en_diap[1]) + ',' + str(tally.values[en_diap]) + ',' + str(tally.dispersion[en_diap]) + '\n')
                     if en_diap[0] > 7:
                         continue
                     if mode == 'PP':
-                        if en_diap[0] > 1:
+                        if en_diap[0] > 2:
                             continue
                     left.append(en_diap[0])
                     width.append(en_diap[1] - en_diap[0])
-                    if mode == 'PP':
-                        values.append((tally.values[en_diap] - etalon.values[en_diap]) * (en_diap[1] - en_diap[0]) / 4)
-                    else:
-                        values.append(tally.values[en_diap] * (en_diap[1] - en_diap[0]))
+
+                    values.append((tally.values[en_diap] - etalon.values[en_diap]) * (en_diap[1] - en_diap[0]) / 4)
+
                     dy.append(tally.dispersion[en_diap]*values[-1]  * (en_diap[1] - en_diap[0]))
                     mid.append((en_diap[1] + en_diap[0])/2)
         if count_tallies == 0:
@@ -131,19 +135,21 @@ def plot_en_spectrums_in_back_going_flow(file_name, tally_distances, colors, fil
         #plt.ylim([10**(-11),10**(-6)])
         plt.title(r'back flow.spectrum.\\sample len = ' + str(sample_length) + r'cm. mode = ' + mode)
         plt.xlabel(r'Energy, MEV')
-        plt.ylabel(r'particles, $\frac{F}{cm^2 sec MEV}$')
+        plt.ylabel(r'particles, $\bf \frac{F}{cm^2 sec MEV}$')
 
     outt.close()
     plt.legend()
     plt.grid()
+    #plt.xscale('log')
     plt.savefig(pjoin(folder_to_place_images,title + ".png"), dpi = 300)
     print pjoin(folder_to_place_images,title + ".png")
     plt.show()
     plt.close()
     return left, values, width
 
-def plot_sum_en_spectrum_in_back_going_flow(file_names, tally_distances, colors, PP_file_without_sample, folder_to_place_images):
+def plot_sum_en_spectrum_in_back_going_flow(file_names, tally_distances, colors, files_without_sample, folder_to_place_images):
     neutron_file, photon_file = file_names
+    etalon_n_file, etalon_p_file = files_without_sample
     if os.path.split(neutron_file)[1][1:] != os.path.split(photon_file)[1][1:]:
         print "files_not_correspond_to_each_other"
         return
@@ -164,7 +170,8 @@ def plot_sum_en_spectrum_in_back_going_flow(file_names, tally_distances, colors,
         x = 0
         y = 0
         z = 100 - tally_distance - 1.5
-        etalon = construct_initial_spectrum_tally(PP_file_without_sample,x,y,z)
+        etalon_n = construct_initial_spectrum_tally(etalon_n_file,x,y,z)
+        etalon_p = construct_initial_spectrum_tally(etalon_p_file,x,y,z)
         for tally_ind, tally in enumerate(tallies_n):
             if tallies_n[tally_ind].x == x and tallies_n[tally_ind].y == y and tallies_n[tally_ind].z == z:
                 if tallies_p[tally_ind].x != x or tallies_p[tally_ind].y != y or tallies_p[tally_ind].z != z:
@@ -179,10 +186,10 @@ def plot_sum_en_spectrum_in_back_going_flow(file_names, tally_distances, colors,
 
                     left.append(en_diap[0])
                     width.append(en_diap[1] - en_diap[0])
-                    values.append((tallies_n[tally_ind].values[en_diap] +
-                                       (tallies_p[tally_ind].values[en_diap] - etalon.values[en_diap])/4)
+                    values.append((tallies_n[tally_ind].values[en_diap] - etalon_n.values[en_diap] +
+                                       (tallies_p[tally_ind].values[en_diap] - etalon_p.values[en_diap])/4)
                                         * (en_diap[1] - en_diap[0]))
-                    temp = (tallies_n[tally_ind].dispersion[en_diap]*tallies_n[tally_ind].values[en_diap] + tallies_p[tally_ind].dispersion[en_diap]*(tallies_p[tally_ind].values[en_diap] - etalon.values[en_diap])/4 ) * (en_diap[1] - en_diap[0])
+                    temp = (tallies_n[tally_ind].dispersion[en_diap]*(tallies_n[tally_ind].values[en_diap] - etalon_n.values[en_diap]) + tallies_p[tally_ind].dispersion[en_diap]*(tallies_p[tally_ind].values[en_diap] - etalon_p.values[en_diap])/4 ) * (en_diap[1] - en_diap[0])
                     dy.append(min(temp, values[-1]))
                     mid.append((en_diap[1] + en_diap[0])/2)
         plt.bar(left, values,width, color=col, yerr=dy, log=True, bottom=0.000000001, label=('distance to detector = ' + str(tally_distance) + 'cm.'))
@@ -191,7 +198,7 @@ def plot_sum_en_spectrum_in_back_going_flow(file_names, tally_distances, colors,
         #plt.ylim([10**(-11),10**(-6)])
         plt.title(r'back flow.spectrum.\\sample len = ' + str(sample_length) + r'cm. mode = full')
         plt.xlabel(r'Energy, MEV')
-        plt.ylabel(r'particles, $\frac{F}{cm^2 sec MEV}$')
+        plt.ylabel(r'particles, $\bf \frac{F}{cm^2 sec MEV}$')
         #plt.plot(mid, y, 'r--')
         #plt.savefig("images\\" + title + ".png", dpi = 300)
         #plt.show()
@@ -205,7 +212,8 @@ def plot_sum_en_spectrum_in_back_going_flow(file_names, tally_distances, colors,
     plt.close()
     return left, values, width
 
-def plot_dose_in_back_going_flow_for_each_file(names, tally_distanses, PP_file_without_sample, folder_to_place_images):
+def plot_dose_in_back_going_flow_for_each_file(names, tally_distanses, file_without_sample, folder_to_place_images):
+    plt.figure(figsize=FIGURES_SIZE)
     legend = []
     for file_name in names:
         sample_length, mode = sample_length_and_mode_by_file_name(file_name)
@@ -213,14 +221,13 @@ def plot_dose_in_back_going_flow_for_each_file(names, tally_distanses, PP_file_w
         dosa_at_length = {}
         for tally_ind, tally in enumerate(tallies):
             if tally.x == 0 and tally.y == 0 and (100 - tally.z - 1.5 in tally_distanses):
+                etalon = construct_initial_spectrum_tally(file_without_sample,
+                                                          tally.x,
+                                                          tally.y,
+                                                          tally.z)
+                dosa, dispersion = (tally.get_dose() - etalon.get_dose())
                 if mode == 'PP':
-                    etalon = construct_initial_spectrum_tally(PP_file_without_sample,
-                                                              tally.x,
-                                                              tally.y,
-                                                              tally.z)
-                    dosa, dispersion = (tally.get_dose() - etalon.get_dose())/4.
-                else:
-                    dosa, dispersion = tally.get_dose()
+                    dosa = dosa/4.
                 dosa_at_length[100 - tally.z - 1.5] = (dosa, dispersion)
         x = sorted(dosa_at_length.keys())
         y = [dosa_at_length[k][0] for k in x]
@@ -228,28 +235,34 @@ def plot_dose_in_back_going_flow_for_each_file(names, tally_distanses, PP_file_w
         plt.yscale('log')
         plt.errorbar(x,y,yerr=dy)
         plt.xlabel('Distance to detector, sm.')
-        plt.ylabel(r'Dose $ \frac{mkr}{sec}$')
+        plt.ylabel(r'Dose $\bf \frac{mkr}{sec}$')
         plt.grid('on')
         legend.append("Sample length = " + str(sample_length))
     title = "Dose in back going flow. mode = " + mode
     plt.title(title)
-    plt.legend(legend, loc='best')
+    plt.legend(legend, loc='best', prop={'size':LEGENDS_SIZE})
     plt.savefig(pjoin(folder_to_place_images,title + ".png"), dpi = 300)
     plt.show()
 
-def plot_full_dose_in_back_going_flow_for_each_file(names, tally_distanses, PP_file_without_sample, folder_to_place_images):
+def plot_full_dose_in_back_going_flow_for_each_file(names, tally_distanses, files_without_sample, folder_to_place_images):
+    plt.figure(figsize=FIGURES_SIZE)
     legend = []
+    etalon_n_file, etalon_p_file = files_without_sample
     for neutron_file, photon_file in names:
         sample_length, garbage = sample_length_and_mode_by_file_name(neutron_file)
         tallies_n, tallies_p = obr.construct_tallies(neutron_file), obr.construct_tallies(photon_file)
         dosa_at_length = {}
         for tally_ind, (tally_n, tally_p) in enumerate(zip(tallies_n, tallies_p)):
             if tally_n.x == 0 and tally_n.y == 0 and (100 - tally_n.z - 1.5 in tally_distanses):
-                etalon = construct_initial_spectrum_tally(PP_file_without_sample,
+                etalon_n = construct_initial_spectrum_tally(etalon_n_file,
                                                               tally_p.x,
                                                               tally_p.y,
                                                               tally_p.z)
-                dosa, dispersion = tally_n.get_dose() + (tally_p.get_dose() - etalon.get_dose())/4.
+                etalon_p = construct_initial_spectrum_tally(etalon_p_file,
+                                                              tally_p.x,
+                                                              tally_p.y,
+                                                              tally_p.z)
+                dosa, dispersion = tally_n.get_dose() - etalon_n.get_dose() + (tally_p.get_dose() - etalon_p.get_dose())/4.
                 dosa_at_length[100 - tally_n.z - 1.5] = (dosa, dispersion)
         x = sorted(dosa_at_length.keys())
         y = [dosa_at_length[k][0] for k in x]
@@ -257,12 +270,12 @@ def plot_full_dose_in_back_going_flow_for_each_file(names, tally_distanses, PP_f
         plt.yscale('log')
         plt.errorbar(x,y,yerr=dy)
         plt.xlabel('Distance to detector, sm.')
-        plt.ylabel(r'Dose $ \frac{mkr}{sec}$')
+        plt.ylabel(r'Dose $\bf \frac{mkr}{sec}$')
         plt.grid('on')
         legend.append("Sample length = " + str(sample_length))
     title = "Dose in back going flow. mode = full."
     plt.title(title)
-    plt.legend(legend, loc='best')
+    plt.legend(legend, loc='best', prop={'size':LEGENDS_SIZE})
     plt.savefig(pjoin(folder_to_place_images,title + ".png"), dpi = 300)
     plt.show()
 
@@ -299,8 +312,14 @@ def extend_x_y(x,y):
     yield -y, -x
     return
 
-def plot_dose_after_the_sample(names, FOLDER_TO_SAVE_IMAGES):
+def plot_dose_after_the_sample(names, FOLDER_TO_SAVE_IMAGES, subpl=None):
+    counter = 1
+    if subpl is not None:
+        plt.figure(figsize=(FIGURES_SIZE[0]*subpl[1], FIGURES_SIZE[0]*subpl[0]))
     for neutron_file, photon_file in names:
+        if subpl is not None:
+            plt.subplot(subpl[0], subpl[1], counter)
+        counter += 1
         sample_length, garbage = sample_length_and_mode_by_file_name(neutron_file)
         tallies_n, tallies_p = obr.construct_tallies(neutron_file), obr.construct_tallies(photon_file)
         xs = []
@@ -317,7 +336,8 @@ def plot_dose_after_the_sample(names, FOLDER_TO_SAVE_IMAGES):
                 doses.append(dose)
         xis = np.linspace(-20,20,100)
         yis = np.linspace(-20,20,100)
-        zis = griddata(xs,ys,doses,xis,yis,interp='linear')
+        #zis = griddata(xs,ys,doses,xis,yis,interp='linear')
+        zis = griddata(xs,ys,doses,xis,yis,interp='nn')
         CS = plt.contour(xis, yis, zis, 5, linewidths=0.5, colors='b')
         CS = plt.contourf(xis, yis, zis, 5, cmap=plt.cm.rainbow,
                   vmax=abs(zis).max(), vmin=-abs(zis).max())
@@ -327,8 +347,13 @@ def plot_dose_after_the_sample(names, FOLDER_TO_SAVE_IMAGES):
         plt.xlim(-21,21)
         plt.ylim(-21,21)
         cbar.set_label(r'$\frac{mkr}{sec}$')
-        title = "Dose after the sample. sample length = " + str(sample_length) + '. mode = full'
+        title = "Dose after the sample.\n sample length = " + str(sample_length) + '. mode = full'
         plt.title(title)
-        plt.savefig(pjoin(FOLDER_TO_SAVE_IMAGES, title + '.png'), dpi=300)
-        plt.show()
+        plt.xlabel("'x' dimension, sm")
+        plt.ylabel("'y' dimension, sm")
+        if subpl is None:
+            plt.savefig(pjoin(FOLDER_TO_SAVE_IMAGES, title + '.png'), dpi=300)
+            plt.show()
 
+    if subpl is not None:
+        plt.savefig(pjoin(FOLDER_TO_SAVE_IMAGES, 'Doses_after_the_sample.' + '.png'), dpi=300)

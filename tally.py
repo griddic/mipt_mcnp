@@ -89,6 +89,7 @@ class Tally:
 
     def get_dose(self):
         u"""  Возвращает дозу в мкр/сек.
+        И абсолютную ошибку.
         """
         keys_ = sorted(self.values.keys())
         energies = np.array([(x[0]+x[1])/2. for x in keys_])
@@ -98,5 +99,5 @@ class Tally:
 
         shneider_multipliers = self.shneider_function(energies)
         dosa = np.sum(values * shneider_multipliers)
-        abs_err = np.sum(dispersion * shneider_multipliers)
+        abs_err = np.sum(abs_errors * shneider_multipliers)
         return np.array([dosa, abs_err])
