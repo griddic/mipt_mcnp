@@ -337,7 +337,7 @@ def plot_dose_after_the_sample(names, FOLDER_TO_SAVE_IMAGES, subpl=None):
         xis = np.linspace(-20,20,100)
         yis = np.linspace(-20,20,100)
         #zis = griddata(xs,ys,doses,xis,yis,interp='linear')
-        zis = griddata(xs,ys,doses,xis,yis,interp='nn')
+        zis = griddata(xs,ys,doses,xis,yis,interp='linear')
         CS = plt.contour(xis, yis, zis, 5, linewidths=0.5, colors='b')
         CS = plt.contourf(xis, yis, zis, 5, cmap=plt.cm.rainbow,
                   vmax=abs(zis).max(), vmin=-abs(zis).max())
