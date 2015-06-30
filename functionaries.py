@@ -6,8 +6,10 @@ import obr
 from os.path import join as pjoin
 from matplotlib import pyplot as plt
 from matplotlib.mlab import griddata
+from scipy.interpolate import griddata as griddata_sc
+import itertools
 
-FIGURES_SIZE = (10,6)
+FIGURES_SIZE = (6,4)
 LEGENDS_SIZE = 12
 
 def __parse_name(file_name):
@@ -238,10 +240,11 @@ def plot_dose_in_back_going_flow_for_each_file(names, tally_distanses, file_with
         plt.ylabel(r'Dose $\bf \frac{mkr}{sec}$')
         plt.grid('on')
         legend.append("Sample length = " + str(sample_length))
-    title = "Dose in back going flow. mode = " + mode
+    title = "Dose in back going flow mode = " + mode
     plt.title(title)
     plt.legend(legend, loc='best', prop={'size':LEGENDS_SIZE})
-    plt.savefig(pjoin(folder_to_place_images,title + ".png"), dpi = 300)
+    plt.gcf().subplots_adjust(bottom=0.2, top=0.8, left=0.2)
+    plt.savefig(pjoin(folder_to_place_images,title.replace(' ','_') + ".png"), dpi = 300)
     plt.show()
 
 def plot_full_dose_in_back_going_flow_for_each_file(names, tally_distanses, files_without_sample, folder_to_place_images):
@@ -273,10 +276,11 @@ def plot_full_dose_in_back_going_flow_for_each_file(names, tally_distanses, file
         plt.ylabel(r'Dose $\bf \frac{mkr}{sec}$')
         plt.grid('on')
         legend.append("Sample length = " + str(sample_length))
-    title = "Dose in back going flow. mode = full."
+    title = "Dose in back going flow mode = full"
     plt.title(title)
     plt.legend(legend, loc='best', prop={'size':LEGENDS_SIZE})
-    plt.savefig(pjoin(folder_to_place_images,title + ".png"), dpi = 300)
+    plt.gcf().subplots_adjust(bottom=0.2, top=0.8, left=0.2)
+    plt.savefig(pjoin(folder_to_place_images,title.replace(' ','_') + ".png"), dpi = 300)
     plt.show()
 
 
@@ -312,10 +316,12 @@ def extend_x_y(x,y):
     yield -y, -x
     return
 
-def plot_dose_after_the_sample(names, FOLDER_TO_SAVE_IMAGES, subpl=None):
+def plot_dose_after_the_sample(names, FOLDER_TO_SAVE_IMAGES, subpl=None, interp_method='linear'):
     counter = 1
     if subpl is not None:
         plt.figure(figsize=(FIGURES_SIZE[0]*subpl[1], FIGURES_SIZE[0]*subpl[0]))
+    else:
+        plt.figure(figsize=FIGURES_SIZE)
     for neutron_file, photon_file in names:
         if subpl is not None:
             plt.subplot(subpl[0], subpl[1], counter)
@@ -327,7 +333,7 @@ def plot_dose_after_the_sample(names, FOLDER_TO_SAVE_IMAGES, subpl=None):
         doses = []
         for tally_n, tally_p in zip(tallies_n, tallies_p):
             assert tally_n.is_the_same(tally_p), "Tallies are not correspond to each other."
-            if abs(tally_n.x) > 20 or abs(tally_n.y) > 20:
+            if abs(tally_n.x) > 20 or abs(tally_n.y) > 20 or tally_n.z < 100:
                 continue
             dose = tally_n.get_dose()[0] + tally_p.get_dose()[0]/4.
             for x,y in extend_x_y(tally_n.x,tally_n.y):
@@ -337,7 +343,8 @@ def plot_dose_after_the_sample(names, FOLDER_TO_SAVE_IMAGES, subpl=None):
         xis = np.linspace(-20,20,100)
         yis = np.linspace(-20,20,100)
         #zis = griddata(xs,ys,doses,xis,yis,interp='linear')
-        zis = griddata(xs,ys,doses,xis,yis,interp='linear')
+        #zis = griddata(xs,ys,doses,xis,yis,interp='nn')
+        zis = griddata_sc(np.array(list(zip(xs, ys))), np.array(doses), np.array(list(itertools.product(xis, yis))),  method=interp_method, fill_value=0).reshape((100,100))
         CS = plt.contour(xis, yis, zis, 5, linewidths=0.5, colors='b')
         CS = plt.contourf(xis, yis, zis, 5, cmap=plt.cm.rainbow,
                   vmax=abs(zis).max(), vmin=-abs(zis).max())
@@ -347,13 +354,15 @@ def plot_dose_after_the_sample(names, FOLDER_TO_SAVE_IMAGES, subpl=None):
         plt.xlim(-21,21)
         plt.ylim(-21,21)
         cbar.set_label(r'$\frac{mkr}{sec}$')
-        title = "Dose after the sample.\n sample length = " + str(sample_length) + '. mode = full'
+        title = "Dose after the sample \n sample length = " + str(sample_length) + ' mode = full'
         plt.title(title)
         plt.xlabel("'x' dimension, sm")
         plt.ylabel("'y' dimension, sm")
         if subpl is None:
-            plt.savefig(pjoin(FOLDER_TO_SAVE_IMAGES, title + '.png'), dpi=300)
+            plt.gcf().subplots_adjust(bottom=0.2, top=0.8, left=0.2)
+            plt.savefig(pjoin(FOLDER_TO_SAVE_IMAGES, title.replace('\n','_').replace(' ','_') + '.png'), dpi=300)
             plt.show()
 
     if subpl is not None:
+
         plt.savefig(pjoin(FOLDER_TO_SAVE_IMAGES, 'Doses_after_the_sample.' + '.png'), dpi=300)
